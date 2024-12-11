@@ -1,53 +1,49 @@
-*ERROR: M,Hidden Figures,9,Drama,126,2016,Jaraji P Henson,Octavia Spencer,Janelle Mon
+ERROR: M,Hidden Figures,9,Drama,126,2016,Jaraji P Henson,Octavia Spencer,Janelle Monae,,
 Previous record has an invalid stoi argument error
 
-ERROR: B,Hamlet,William Shakespeare,4,Tragedy,214,1600
-There was an invalid value entered for year. 
-
-ERROR: B,Fahrenheit 451,Ray Bradbury,Sci-Fi,256,1953
+ERROR: B,Hamlet,William Shakespeare,4,Tragedy,214,1600,0
+There was an invalid value entered for year.
+ERROR: B,Fahrenheit 451,Ray Bradbury,Science Fiction,256,1953,,,,,
 Previous record has an invalid stoi argument error
 
-ERROR: M,So I Married an Axe Murderer,Thomas Schlamme,15,Comedy,93,1993,Mike Meyers,Nancy Trav
-There was an invalid value entered for rating. 
-
-ERROR: B,Crime and Punishment,Fyodor Dostoevsky,7,Crime Fiction,576,1866,
-There was an invalid value entered for year. 
-
-ERROR: B,Watchmen,Alan Moore,8,Sci-Fi,416,1987,ERR
+ERROR: M,So I Married an Axe Murderer,Thomas Schlamme,15,Comedy,93,1993,0
+There was an invalid value entered for rating.
+ERROR: S,Baba Yetu,Christopher Tin,10,Choir,203,2025,0
+There was an invalid value entered for year.
+ERROR: S,Blinding Lights,the Weeknd,10,9,Synthwave,2020,,,,
 Previous record has an invalid stoi argument error
 
-ERROR: S,Baba Yetu,Christopher Tin,10,Choir,203,2025
-There was an invalid value entered for year. 
-
-ERROR: S,Blinding Lights,the Weeknd,10,9,INVALID,2020
+ERROR: Q,,,,,,,,,,
 Previous record has an invalid stoi argument error
-
-ERROR: S,Stayin' Alive,Bee Gees,10,Pop,419,1979,ERR
-Previous record has an error in boolean value
 
 The rating provided: 11 is invalid
 
-The rating provided: -3 is invalid
+ERROR: M,Psych 2: Lassie Come Home,Steve Franks,16,Comedy,115,2020,0
+There was an invalid value entered for rating.
+ERROR: S,Respect,Aretha Franklin,ERROR,R&B,281,1967,1
+Previous record has an invalid stoi argument error
 
-Unable to process command. There was an invalid value entered for rating: Psych 2: Lassie Come Home
+ERROR: S,Strawberry Fields Forever,Beatles,9,pop,ERROR,1967,0
+Previous record has an invalid stoi argument error
 
-Unable to process command. There was an invalid value entered for item: Respect
+Previous record has an error in boolean value
 
-Unable to process command. There was an invalid value entered for item: Strawberry Fields Forever
+Previous record has an invalid stoi argument error
 
-Unable to process command. There was an invalid value entered (Top 40) for item: Strawberry Fields Forever
+ERROR: B,The Brothers Hawthorne,Jennifer Lynn Barnes,9,Mystery,400,ERROR,0
+Previous record has an invalid stoi argument error
 
-Unable to process command. There was an invalid value entered for weeks: Close Encounters
-
-Unable to process command. There was an invalid value entered for item: The Brothers Hawthorne
-
-Unable to process command. There was an invalid value entered for year: Lessons in Chemistry
-
+ERROR: B,Lessons in Chemistry,Bonnie Garmus,5,Humor,320,2026,0
+There was an invalid value entered for year.
 The rating provided: 15 is invalid
 
 Unable to process command. The genre: none is not found in your list
 
+Unable to process command. The movie: 'Hidden Figures' is not found in your list
+
 Unable to process command. The movie: 'Lost' is not found in your list
+
+Unable to process command. The movie: 'Dune' is not found in your list
 
 Unable to process command. The star: Victor Lee is not found in any movies in your list
 

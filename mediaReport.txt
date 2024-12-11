@@ -1,505 +1,503 @@
-*++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
              YOUR MOVIE LIST
 
-#           TITLE                           YEAR    RATING      GENRE						OTHER FIELDS
-1  To Kill a Mockingbird                    1962       5		Drama               		Stars: Gregory Peck Mary Badham 
-2  Ferris Bueller's Day Off                 1986       7		Comedy              		Stars: Matthew Broderick Alan Ruck Jennifer Grey 
-3  Rocky                                    1976       7		Action              		Stars: Sylvester Stallone Carl Weathers 
-4  Jaws                                     1975       5		Action              		Stars: Roy Scheider Richard Dreyfuss 
-5  Daughters of the Dust                    1991       8		Drama               		Stars: Alva Rogers Cora Lee Day 
-6  Raiders of the Lost Ark                  1981       6		Action              		Stars: Harrison Ford Karen Allen 
-7  Star Wars IV                             1977       6		Action              		Stars: Mark Hamill Carrie Fisher Harrison Ford Alec Guiness 
-8  Mr. Holland's Opus                       1995       8		Drama/Musical       		Stars: Richard Dreyfuss Jay Thomas Glenne Headly 
-15 Blade Runner 2049                        2017       9		Sci-Fi              		Stars: Ryan Gosling Harrison Ford 
-16 Jurassic Park                            1993       8		Sci-Fi              		Stars: Sam Neill Jeff Goldblum 
-17 Dune                                     2021       7		Sci-Fi              		Stars: Timothee Chalamet Zendaya 
-18 Fight Club                               1999      10		Drama               		Stars: Brad Pitt Edward Norton 
-19 Percy Jackson and the Lightning Thief    2010       2		Fantasy             		Stars: Logan Lerman Alexandra Daddario 
-20 The Grand Budapest Hotel                 2014       9		Adventure           		Stars: Ralph Fiennes Saoirse Ronan 
-21 Superman                                 1978       8		Sci-Fi              		Stars: Christopher Reeve Gene Hackman Margo Kidder 
-22 Spirited Away                            2002       8		Fantasy             		Stars: Rumi Hiiragi Miyu Irino 
-23 Gone Girl                                2014      10		Thriller/Mystery    		Stars: Ben Affleck Rosamund Pike 
-24 Moonlight                                2016      10		Drama               		Stars: Mahershala Ali Naomi Harris 
-25 The Wolf of Wallstreet                   2013      10		Comedy              		Stars: Leonardo DiCaprio Jonah Hill 
-26 Maximum Overdrive                        1986       5		Horror              		Stars: Emilio Estivez Pat Hingle Laura Harrington 
+                                   
 
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+  1  To Kill a Mockingbird              1962      5         Drama               Stars: Gregory Peck, Mary Badham
+2    Ferris Bueller's Day Off           1986      7         Comedy              Stars: Matthew Broderick, Alan Ruck, Jennifer Grey
+3    Rocky                              1976      7         Drama/Action        Stars: Sylvester Stallone, Carl Weathers
+4    Jaws                               1975      5         Drama/Action        Stars: Roy Scheider, Richard Dreyfuss
+5    Daughters of the Dust              1991      8         Drama               Stars: Alva Rogers, Cora Lee Day
+6    Raiders of the Lost Ark            1981      6         Action Adventure    Stars: Harrison Ford, Karen Allen
+7    Star Wars IV                       1977      6         Action Adventure    Stars: Mark Hamill, Carrie Fisher, Harrison Ford, Alec Guiness
+8    Mr. Holland's Opus                 1995      8         Drama/Musical       Stars: Richard Dreyfuss, Jay Thomas, Glenne Headly
+9    Blade Runner 2049                  2017      9         Sci-Fi              Stars: Ryan Gosling, Harrison Ford
+10   Jurassic Park                      1993      8         Sci-Fi              Stars: Sam Neill, Jeff Goldblum
+11   Dune                               2021      7         Sci-Fi              Stars: Timothee Chalamet, Zendaya
+12   Fight Club                         1999      10        Drama               Stars: Brad Pitt, Edward Norton
+13   Percy Jackson and the Lightning Thief2010      2         Fantasy             Stars: Logan Lerman, Alexandra Daddario
+14   The Grand Budapest Hotel           2014      9         Adventure           Stars: Ralph Fiennes, Saoirse Ronan
+15   Superman                           1978      8         Sci-Fi              Stars: Christopher Reeve, Gene Hackman, Margo Kidder
+16   Spirited Away                      2002      8         Fantasy             Stars: Rumi Hiiragi, Miyu Irino
+17   Gone Girl                          2014      10        Thriller/Mystery    Stars: Ben Affleck, Rosamund Pike
+18   Moonlight                          2016      10        Drama               Stars: Mahershala Ali, Naomi Harris
+19   The Wolf of Wallstreet             2013      10        Comedy/Crime        Stars: Leonardo DiCaprio, Jonah Hill
+++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++
-              YOUR BOOK LIST
+             YOUR BOOK LIST
 
-#           TITLE                           YEAR    RATING      GENRE						OTHER FIELDS
-9  To Kill a Mockingbird                    1960       8		Southern Gothic Fiction		Weeks NYT: 4
-10 Animal Farm                              1945       8		Allegory            		Weeks NYT: 6
-11 The Great Gatsby                         1925       7		Modernist novel     		Weeks NYT: 10
-12 The Catcher in the Rye                   1951       3		Coming of Age       		Weeks NYT: 9
-13 Lord of the Flies                        1954       6		Adventure           		Weeks NYT: 3
-14 Of Mice and Men                          1937       5		Tragedy             		Weeks NYT: 15
-27 House of Leaves                          2000       9		Horror              		Weeks NYT: 0
-28 I Can Teach You to Be Rich               2009       8		Self Help           		Weeks NYT: 16
-29 Neuromancer                              1984      10		Cyberpunk           		Weeks NYT: 16
-30 Percy Jackson and the Last Olympian      2009       9		Fantasy             		Weeks NYT: 15
-31 Six of Crows                             2015      10		Fantasy             		Weeks NYT: 20
-32 The Alchemist                            1993       9		Adventure           		Weeks NYT: 10
-33 The Goldfinch                            2013      10		Suspense            		Weeks NYT: 1
-34 The Hunger Games                         2008       7		Action              		Weeks NYT: 15
-35 The Music of Erich Zann                  1921      10		Horror              		Weeks NYT: 2
-36 Way of kings                             2010      10		Fantasy             		Weeks NYT: 5
+                                   
 
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+1    To Kill a Mockingbird              1960      8         Southern Gothic FictionWeeks NYT: 0
+2    Animal Farm                        1945      8         Allegory            Weeks NYT: 0
+3    The Great Gatsby                   1925      7         Modernist novel     Weeks NYT: 0
+4    The Catcher in the Rye             1951      3         Coming of Age       Weeks NYT: 0
+5    Lord of the Flies                  1954      6         Adventure           Weeks NYT: 0
+6    Of Mice and Men                    1937      5         Tragedy             Weeks NYT: 0
+7    Crime and Punishment               1866      7         Crime Fiction       Weeks NYT: 0
+8    House of Leaves                    2000      9         Horror              Weeks NYT: 0
+9    I Can Teach You to Be Rich         2009      8         Self Help           Weeks NYT: 0
+10   Neuromancer                        1984      10        Cyberpunk           Weeks NYT: 0
+11   Percy Jackson and the Last Olympian2009      9         Fantasy             Weeks NYT: 0
+12   Six of Crows                       2015      10        Fantasy             Weeks NYT: 0
+13   The Alchemist                      1993      9         Adventure           Weeks NYT: 0
+14   The Goldfinch                      2013      10        Suspense            Weeks NYT: 0
+15   The Hunger Games                   2008      7         Action              Weeks NYT: 0
+16   The Music of Erich Zann            1921      10        Horror              Weeks NYT: 0
+17   Watchmen                           1987      8         Science Fiction     Weeks NYT: 0
+18   Way of kings                       2010      10        Fantasy             Weeks NYT: 0
+++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++
-              YOUR SONG LIST
+             YOUR SONG LIST
 
-#           TITLE                           YEAR    RATING      GENRE						OTHER FIELDS
-37 All Too Well                             2012      10		Pop                 		Top 40 Hit
-38 Ball if I want to                        2021      10		Rap                 		Top 40 Hit
-39 Call out my name                         2021       8		R&B                 		---
-40 Yesterday                                1965       8		Rock                		Top 40 Hit
-41 Compass                                  2018       8		Indie               		Top 40 Hit
-42 Easy on me                               2021       6		pop                 		---
-43 Figures                                  2018       8		R&B                 		---
-44 First Love / Late Spring                 2014      10		Indie               		Top 40 Hit
-45 Frozen                                   2017       5		R&B                 		Top 40 Hit
-46 Garden Grove                             1998      10		Reggae              		---
-47 Hey Jude                                 1968      10		Rock                		Top 40 Hit
-48 Har dil ki ava                           2014      10		Slow music          		Top 40 Hit
-49 Holy Ghost                               2015       8		Choir               		Top 40 Hit
-50 kal ho na ho                             2009       9		Punajbi             		---
-51 Let It Be                                1970       9		Rock                		Top 40 Hit
-52 Monks                                    2012      10		Pop                 		Top 40 Hit
-53 More Than a Woman                        1977       9		Pop                 		---
-54 nasha ha                                 2010       8		normal one          		---
-55 Out Tha Mud                              2015      10		Rap                 		---
-56 Phali dafa                               2017       9		urdu                		---
-57 Sea Dragon                               2018       9		Math Rock           		Top 40 Hit
-58 Slacker                                  2002      10		Rap                 		Top 40 Hit
-59 Something                                2015      10		R&B - Jazz          		Top 40 Hit
-60 Sweet Caroline                           1969      10		Rock                		Top 40 Hit
-61 Sweet Life                               2012       8		Pop                 		---
-62 Thank u - next                           2019       8		Pop                 		Top 40 Hit
-63 The Mountain Top                         2021      10		Video Game Soundtrack		---
-64 Tik Tok                                  2009       9		Pop                 		Top 40 Hit
-65 Tranquility Base Hotel & Casino          2018      10		Rock                		Top 40 Hit
-66 Wake Up                                  2015       9		Alternative         		---
+                                   
 
-
-
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+1    All Too Well                       2012      10        Pop                 ---
+2    Ball if I want to                  2021      10        Rap                 ---
+3    Call out my name                   2021      8         R&B                 ---
+4    Compass                            2018      8         Indie               ---
+5    Easy on me                         2021      6         pop                 ---
+6    Figures                            2018      8         R&B                 ---
+7    First Love / Late Spring           2014      10        Indie               ---
+8    Frozen                             2017      5         R&B                 ---
+9    Garden Grove                       1998      10        Reggae              ---
+10   Har dil ki ava                     2014      10        Slow music          ---
+11   Holy Ghost                         2015      8         Choir               ---
+12   kal ho na ho                       2009      9         Punajbi             ---
+13   Monks                              2012      10        Pop                 ---
+14   More Than a Woman                  1977      9         Pop                 ---
+15   nasha ha                           2010      8         normal one          ---
+16   Out Tha Mud                        2015      10        Rap                 ---
+17   Phali dafa                         2017      9         urdu                ---
+18   Sea Dragon                         2018      9         Math Rock           ---
+19   Slacker                            2002      10        Rap                 ---
+20   Something                          2015      10        R&B - Jazz          ---
+21   Stayin' Alive                      1979      10        Pop                 ---
+22   Sweet Caroline                     1969      10        Rock                ---
+23   Sweet Life                         2012      8         Pop                 ---
+24   Thank u - next                     2019      8         Pop                 ---
+25   The Mountain Top                   2021      10        Video Game Soundtrack---
+26   Tik Tok                            2009      9         Pop                 ---
+27   Tranquility Base Hotel & Casino    2018      10        Rock                ---
+28   Wake Up                            2015      9         Alternative         ---
 ++++++++++++++++++++++++++++++++++++++++++++++++++++
-             YOUR MEDIA LIST
-
-#           TITLE                           YEAR    RATING      GENRE						OTHER FIELDS
-1  To Kill a Mockingbird                    1962       5		Drama               		Stars: Gregory Peck Mary Badham 
-2  Ferris Bueller's Day Off                 1986       7		Comedy              		Stars: Matthew Broderick Alan Ruck Jennifer Grey 
-3  Rocky                                    1976       7		Action              		Stars: Sylvester Stallone Carl Weathers 
-4  Jaws                                     1975       5		Action              		Stars: Roy Scheider Richard Dreyfuss 
-5  Daughters of the Dust                    1991       8		Drama               		Stars: Alva Rogers Cora Lee Day 
-6  Raiders of the Lost Ark                  1981       6		Action              		Stars: Harrison Ford Karen Allen 
-7  Star Wars IV                             1977       6		Action              		Stars: Mark Hamill Carrie Fisher Harrison Ford Alec Guiness 
-8  Mr. Holland's Opus                       1995       8		Drama/Musical       		Stars: Richard Dreyfuss Jay Thomas Glenne Headly 
-9  To Kill a Mockingbird                    1960       8		Southern Gothic Fiction		Weeks NYT: 4
-10 Animal Farm                              1945       8		Allegory            		Weeks NYT: 6
-11 The Great Gatsby                         1925       7		Modernist novel     		Weeks NYT: 10
-12 The Catcher in the Rye                   1951       3		Coming of Age       		Weeks NYT: 9
-13 Lord of the Flies                        1954       6		Adventure           		Weeks NYT: 3
-14 Of Mice and Men                          1937       5		Tragedy             		Weeks NYT: 15
-15 Blade Runner 2049                        2017       9		Sci-Fi              		Stars: Ryan Gosling Harrison Ford 
-16 Jurassic Park                            1993       8		Sci-Fi              		Stars: Sam Neill Jeff Goldblum 
-17 Dune                                     2021       7		Sci-Fi              		Stars: Timothee Chalamet Zendaya 
-18 Fight Club                               1999      10		Drama               		Stars: Brad Pitt Edward Norton 
-19 Percy Jackson and the Lightning Thief    2010       2		Fantasy             		Stars: Logan Lerman Alexandra Daddario 
-20 The Grand Budapest Hotel                 2014       9		Adventure           		Stars: Ralph Fiennes Saoirse Ronan 
-21 Superman                                 1978       8		Sci-Fi              		Stars: Christopher Reeve Gene Hackman Margo Kidder 
-22 Spirited Away                            2002       8		Fantasy             		Stars: Rumi Hiiragi Miyu Irino 
-23 Gone Girl                                2014      10		Thriller/Mystery    		Stars: Ben Affleck Rosamund Pike 
-24 Moonlight                                2016      10		Drama               		Stars: Mahershala Ali Naomi Harris 
-25 The Wolf of Wallstreet                   2013      10		Comedy              		Stars: Leonardo DiCaprio Jonah Hill 
-26 Maximum Overdrive                        1986       5		Horror              		Stars: Emilio Estivez Pat Hingle Laura Harrington 
-27 House of Leaves                          2000       9		Horror              		Weeks NYT: 0
-28 I Can Teach You to Be Rich               2009       8		Self Help           		Weeks NYT: 16
-29 Neuromancer                              1984      10		Cyberpunk           		Weeks NYT: 16
-30 Percy Jackson and the Last Olympian      2009       9		Fantasy             		Weeks NYT: 15
-31 Six of Crows                             2015      10		Fantasy             		Weeks NYT: 20
-32 The Alchemist                            1993       9		Adventure           		Weeks NYT: 10
-33 The Goldfinch                            2013      10		Suspense            		Weeks NYT: 1
-34 The Hunger Games                         2008       7		Action              		Weeks NYT: 15
-35 The Music of Erich Zann                  1921      10		Horror              		Weeks NYT: 2
-36 Way of kings                             2010      10		Fantasy             		Weeks NYT: 5
-37 All Too Well                             2012      10		Pop                 		Top 40 Hit
-38 Ball if I want to                        2021      10		Rap                 		Top 40 Hit
-39 Call out my name                         2021       8		R&B                 		---
-40 Yesterday                                1965       8		Rock                		Top 40 Hit
-41 Compass                                  2018       8		Indie               		Top 40 Hit
-42 Easy on me                               2021       6		pop                 		---
-43 Figures                                  2018       8		R&B                 		---
-44 First Love / Late Spring                 2014      10		Indie               		Top 40 Hit
-45 Frozen                                   2017       5		R&B                 		Top 40 Hit
-46 Garden Grove                             1998      10		Reggae              		---
-47 Hey Jude                                 1968      10		Rock                		Top 40 Hit
-48 Har dil ki ava                           2014      10		Slow music          		Top 40 Hit
-49 Holy Ghost                               2015       8		Choir               		Top 40 Hit
-50 kal ho na ho                             2009       9		Punajbi             		---
-51 Let It Be                                1970       9		Rock                		Top 40 Hit
-52 Monks                                    2012      10		Pop                 		Top 40 Hit
-53 More Than a Woman                        1977       9		Pop                 		---
-54 nasha ha                                 2010       8		normal one          		---
-55 Out Tha Mud                              2015      10		Rap                 		---
-56 Phali dafa                               2017       9		urdu                		---
-57 Sea Dragon                               2018       9		Math Rock           		Top 40 Hit
-58 Slacker                                  2002      10		Rap                 		Top 40 Hit
-59 Something                                2015      10		R&B - Jazz          		Top 40 Hit
-60 Sweet Caroline                           1969      10		Rock                		Top 40 Hit
-61 Sweet Life                               2012       8		Pop                 		---
-62 Thank u - next                           2019       8		Pop                 		Top 40 Hit
-63 The Mountain Top                         2021      10		Video Game Soundtrack		---
-64 Tik Tok                                  2009       9		Pop                 		Top 40 Hit
-65 Tranquility Base Hotel & Casino          2018      10		Rock                		Top 40 Hit
-66 Wake Up                                  2015       9		Alternative         		---
-
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++
-YOUR MEDIA LIBRARY
-#   TYPE
-20   Movies    
-16   Books     
-30   Songs     
-66   Items     
-
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++
-YOUR BOOK LIST FOR RATINGS >= 8
-
-#           TITLE                           YEAR    RATING      GENRE						OTHER FIELDS
-9  To Kill a Mockingbird                    1960       8		Southern Gothic Fiction		Weeks NYT: 4
-10 Animal Farm                              1945       8		Allegory            		Weeks NYT: 6
-27 House of Leaves                          2000       9		Horror              		Weeks NYT: 0
-28 I Can Teach You to Be Rich               2009       8		Self Help           		Weeks NYT: 16
-29 Neuromancer                              1984      10		Cyberpunk           		Weeks NYT: 16
-30 Percy Jackson and the Last Olympian      2009       9		Fantasy             		Weeks NYT: 15
-31 Six of Crows                             2015      10		Fantasy             		Weeks NYT: 20
-32 The Alchemist                            1993       9		Adventure           		Weeks NYT: 10
-33 The Goldfinch                            2013      10		Suspense            		Weeks NYT: 1
-35 The Music of Erich Zann                  1921      10		Horror              		Weeks NYT: 2
-36 Way of kings                             2010      10		Fantasy             		Weeks NYT: 5
-
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++
-YOUR SONG LIST FOR RATINGS >= 9
-
-#           TITLE                           YEAR    RATING      GENRE						OTHER FIELDS
-37 All Too Well                             2012      10		Pop                 		Top 40 Hit
-38 Ball if I want to                        2021      10		Rap                 		Top 40 Hit
-44 First Love / Late Spring                 2014      10		Indie               		Top 40 Hit
-46 Garden Grove                             1998      10		Reggae              		---
-47 Hey Jude                                 1968      10		Rock                		Top 40 Hit
-48 Har dil ki ava                           2014      10		Slow music          		Top 40 Hit
-50 kal ho na ho                             2009       9		Punajbi             		---
-51 Let It Be                                1970       9		Rock                		Top 40 Hit
-52 Monks                                    2012      10		Pop                 		Top 40 Hit
-53 More Than a Woman                        1977       9		Pop                 		---
-55 Out Tha Mud                              2015      10		Rap                 		---
-56 Phali dafa                               2017       9		urdu                		---
-57 Sea Dragon                               2018       9		Math Rock           		Top 40 Hit
-58 Slacker                                  2002      10		Rap                 		Top 40 Hit
-59 Something                                2015      10		R&B - Jazz          		Top 40 Hit
-60 Sweet Caroline                           1969      10		Rock                		Top 40 Hit
-63 The Mountain Top                         2021      10		Video Game Soundtrack		---
-64 Tik Tok                                  2009       9		Pop                 		Top 40 Hit
-65 Tranquility Base Hotel & Casino          2018      10		Rock                		Top 40 Hit
-66 Wake Up                                  2015       9		Alternative         		---
-
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++
-YOUR MEDIA LIST FOR RATINGS >= 10
-
-#           TITLE                           YEAR    RATING      GENRE						OTHER FIELDS
-18 Fight Club                               1999      10		Drama               		Stars: Brad Pitt Edward Norton 
-23 Gone Girl                                2014      10		Thriller/Mystery    		Stars: Ben Affleck Rosamund Pike 
-24 Moonlight                                2016      10		Drama               		Stars: Mahershala Ali Naomi Harris 
-25 The Wolf of Wallstreet                   2013      10		Comedy              		Stars: Leonardo DiCaprio Jonah Hill 
-29 Neuromancer                              1984      10		Cyberpunk           		Weeks NYT: 16
-31 Six of Crows                             2015      10		Fantasy             		Weeks NYT: 20
-33 The Goldfinch                            2013      10		Suspense            		Weeks NYT: 1
-35 The Music of Erich Zann                  1921      10		Horror              		Weeks NYT: 2
-36 Way of kings                             2010      10		Fantasy             		Weeks NYT: 5
-37 All Too Well                             2012      10		Pop                 		Top 40 Hit
-38 Ball if I want to                        2021      10		Rap                 		Top 40 Hit
-44 First Love / Late Spring                 2014      10		Indie               		Top 40 Hit
-46 Garden Grove                             1998      10		Reggae              		---
-47 Hey Jude                                 1968      10		Rock                		Top 40 Hit
-48 Har dil ki ava                           2014      10		Slow music          		Top 40 Hit
-52 Monks                                    2012      10		Pop                 		Top 40 Hit
-55 Out Tha Mud                              2015      10		Rap                 		---
-58 Slacker                                  2002      10		Rap                 		Top 40 Hit
-59 Something                                2015      10		R&B - Jazz          		Top 40 Hit
-60 Sweet Caroline                           1969      10		Rock                		Top 40 Hit
-63 The Mountain Top                         2021      10		Video Game Soundtrack		---
-65 Tranquility Base Hotel & Casino          2018      10		Rock                		Top 40 Hit
-
-
-
-Hidden Figures was added to your list
-
-
-
-Africa was added to your list
-
-
-
-Strawberry Fields Forever was added to your list
-
-
-
-Bohemian Rhapsody was added to your list
-
-
-
-Close Encounters was added to your list
-
-
-
-Lessons in Chemistry was added to your list
-
-
-
-Yellow Submarine was added to your list
-
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++
-YOUR SONG LIST FOR RATINGS >= 9
-
-#           TITLE                           YEAR    RATING      GENRE						OTHER FIELDS
-37 All Too Well                             2012      10		Pop                 		Top 40 Hit
-38 Ball if I want to                        2021      10		Rap                 		Top 40 Hit
-44 First Love / Late Spring                 2014      10		Indie               		Top 40 Hit
-46 Garden Grove                             1998      10		Reggae              		---
-47 Hey Jude                                 1968      10		Rock                		Top 40 Hit
-48 Har dil ki ava                           2014      10		Slow music          		Top 40 Hit
-50 kal ho na ho                             2009       9		Punajbi             		---
-51 Let It Be                                1970       9		Rock                		Top 40 Hit
-52 Monks                                    2012      10		Pop                 		Top 40 Hit
-53 More Than a Woman                        1977       9		Pop                 		---
-55 Out Tha Mud                              2015      10		Rap                 		---
-56 Phali dafa                               2017       9		urdu                		---
-57 Sea Dragon                               2018       9		Math Rock           		Top 40 Hit
-58 Slacker                                  2002      10		Rap                 		Top 40 Hit
-59 Something                                2015      10		R&B - Jazz          		Top 40 Hit
-60 Sweet Caroline                           1969      10		Rock                		Top 40 Hit
-63 The Mountain Top                         2021      10		Video Game Soundtrack		---
-64 Tik Tok                                  2009       9		Pop                 		Top 40 Hit
-65 Tranquility Base Hotel & Casino          2018      10		Rock                		Top 40 Hit
-66 Wake Up                                  2015       9		Alternative         		---
-69 Strawberry Fields Forever                1967       9		pop                 		Top 40 Hit
-
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++
-YOUR BOOK LIST FOR RATINGS >= 7
-
-#           TITLE                           YEAR    RATING      GENRE						OTHER FIELDS
-9  To Kill a Mockingbird                    1960       8		Southern Gothic Fiction		Weeks NYT: 4
-10 Animal Farm                              1945       8		Allegory            		Weeks NYT: 6
-11 The Great Gatsby                         1925       7		Modernist novel     		Weeks NYT: 10
-27 House of Leaves                          2000       9		Horror              		Weeks NYT: 0
-28 I Can Teach You to Be Rich               2009       8		Self Help           		Weeks NYT: 16
-29 Neuromancer                              1984      10		Cyberpunk           		Weeks NYT: 16
-30 Percy Jackson and the Last Olympian      2009       9		Fantasy             		Weeks NYT: 15
-31 Six of Crows                             2015      10		Fantasy             		Weeks NYT: 20
-32 The Alchemist                            1993       9		Adventure           		Weeks NYT: 10
-33 The Goldfinch                            2013      10		Suspense            		Weeks NYT: 1
-34 The Hunger Games                         2008       7		Action              		Weeks NYT: 15
-35 The Music of Erich Zann                  1921      10		Horror              		Weeks NYT: 2
-36 Way of kings                             2010      10		Fantasy             		Weeks NYT: 5
-
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++
-YOUR BOOK LIST FOR GENRE Suspense
-
-#           TITLE                           YEAR    RATING      GENRE						OTHER FIELDS
-33 The Goldfinch                            2013      10		Suspense            		Weeks NYT: 1
-
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++
-YOUR SONG LIST FOR GENRE R&B
-
-#           TITLE                           YEAR    RATING      GENRE						OTHER FIELDS
-39 Call out my name                         2021       8		R&B                 		---
-43 Figures                                  2018       8		R&B                 		---
-45 Frozen                                   2017       5		R&B                 		Top 40 Hit
-
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++
-YOUR SONG LIST FOR GENRE Rock
-
-#           TITLE                           YEAR    RATING      GENRE						OTHER FIELDS
-40 Yesterday                                1965       8		Rock                		Top 40 Hit
-47 Hey Jude                                 1968      10		Rock                		Top 40 Hit
-51 Let It Be                                1970       9		Rock                		Top 40 Hit
-60 Sweet Caroline                           1969      10		Rock                		Top 40 Hit
-65 Tranquility Base Hotel & Casino          2018      10		Rock                		Top 40 Hit
-
-
-
-
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++
-THE STARS OF THE MOVIE Hidden Figures ARE: 
-Jaraji P Henson
-Octavia Spencer
-Janelle Monae
-
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++
-THE STARS OF THE MOVIE Dune ARE: 
-Timothee Chalamet
-Zendaya
-
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++
-Octavia Spencer appears in the following movie(s):
-Hidden Figures
-
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++
-Harrison Ford appears in the following movie(s):
-Raiders of the Lost Ark
-Star Wars IV
-Blade Runner 2049
-
-
-
-
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++
-         YOUR LIST CONTAINING Steven Spielberg
-
-#           TITLE                           YEAR    RATING      GENRE						OTHER FIELDS
-4  Jaws                                     1975       5		Action              		Stars: Roy Scheider Richard Dreyfuss 
-16 Jurassic Park                            1993       8		Sci-Fi              		Stars: Sam Neill Jeff Goldblum 
-71 Close Encounters                         1997       5		Science Fiction     		Weeks NYT: 5
-
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++
-         YOUR LIST CONTAINING Bee Gees
-
-#           TITLE                           YEAR    RATING      GENRE						OTHER FIELDS
-53 More Than a Woman                        1977       9		Pop                 		---
-
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++
-         YOUR LIST CONTAINING Beatles
-
-#           TITLE                           YEAR    RATING      GENRE						OTHER FIELDS
-40 Yesterday                                1965       8		Rock                		Top 40 Hit
-47 Hey Jude                                 1968      10		Rock                		Top 40 Hit
-51 Let It Be                                1970       9		Rock                		Top 40 Hit
-69 Strawberry Fields Forever                1967       9		pop                 		Top 40 Hit
-73 Yellow Submarine                         1966       8		pop                 		Top 40 Hit
-
 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++
              YOUR MEDIA LIST
 
-#           TITLE                           YEAR    RATING      GENRE						OTHER FIELDS
-1  To Kill a Mockingbird                    1962       5		Drama               		Stars: Gregory Peck Mary Badham 
-2  Ferris Bueller's Day Off                 1986       7		Comedy              		Stars: Matthew Broderick Alan Ruck Jennifer Grey 
-3  Rocky                                    1976       7		Action              		Stars: Sylvester Stallone Carl Weathers 
-4  Jaws                                     1975       5		Action              		Stars: Roy Scheider Richard Dreyfuss 
-5  Daughters of the Dust                    1991       8		Drama               		Stars: Alva Rogers Cora Lee Day 
-6  Raiders of the Lost Ark                  1981       6		Action              		Stars: Harrison Ford Karen Allen 
-7  Star Wars IV                             1977       6		Action              		Stars: Mark Hamill Carrie Fisher Harrison Ford Alec Guiness 
-8  Mr. Holland's Opus                       1995       8		Drama/Musical       		Stars: Richard Dreyfuss Jay Thomas Glenne Headly 
-9  To Kill a Mockingbird                    1960       8		Southern Gothic Fiction		Weeks NYT: 4
-10 Animal Farm                              1945       8		Allegory            		Weeks NYT: 6
-11 The Great Gatsby                         1925       7		Modernist novel     		Weeks NYT: 10
-12 The Catcher in the Rye                   1951       3		Coming of Age       		Weeks NYT: 9
-13 Lord of the Flies                        1954       6		Adventure           		Weeks NYT: 3
-14 Of Mice and Men                          1937       5		Tragedy             		Weeks NYT: 15
-15 Blade Runner 2049                        2017       9		Sci-Fi              		Stars: Ryan Gosling Harrison Ford 
-16 Jurassic Park                            1993       8		Sci-Fi              		Stars: Sam Neill Jeff Goldblum 
-17 Dune                                     2021       7		Sci-Fi              		Stars: Timothee Chalamet Zendaya 
-18 Fight Club                               1999      10		Drama               		Stars: Brad Pitt Edward Norton 
-19 Percy Jackson and the Lightning Thief    2010       2		Fantasy             		Stars: Logan Lerman Alexandra Daddario 
-20 The Grand Budapest Hotel                 2014       9		Adventure           		Stars: Ralph Fiennes Saoirse Ronan 
-21 Superman                                 1978       8		Sci-Fi              		Stars: Christopher Reeve Gene Hackman Margo Kidder 
-22 Spirited Away                            2002       8		Fantasy             		Stars: Rumi Hiiragi Miyu Irino 
-23 Gone Girl                                2014      10		Thriller/Mystery    		Stars: Ben Affleck Rosamund Pike 
-24 Moonlight                                2016      10		Drama               		Stars: Mahershala Ali Naomi Harris 
-25 The Wolf of Wallstreet                   2013      10		Comedy              		Stars: Leonardo DiCaprio Jonah Hill 
-26 Maximum Overdrive                        1986       5		Horror              		Stars: Emilio Estivez Pat Hingle Laura Harrington 
-27 House of Leaves                          2000       9		Horror              		Weeks NYT: 0
-28 I Can Teach You to Be Rich               2009       8		Self Help           		Weeks NYT: 16
-29 Neuromancer                              1984      10		Cyberpunk           		Weeks NYT: 16
-30 Percy Jackson and the Last Olympian      2009       9		Fantasy             		Weeks NYT: 15
-31 Six of Crows                             2015      10		Fantasy             		Weeks NYT: 20
-32 The Alchemist                            1993       9		Adventure           		Weeks NYT: 10
-33 The Goldfinch                            2013      10		Suspense            		Weeks NYT: 1
-34 The Hunger Games                         2008       7		Action              		Weeks NYT: 15
-35 The Music of Erich Zann                  1921      10		Horror              		Weeks NYT: 2
-36 Way of kings                             2010      10		Fantasy             		Weeks NYT: 5
-37 All Too Well                             2012      10		Pop                 		Top 40 Hit
-38 Ball if I want to                        2021      10		Rap                 		Top 40 Hit
-39 Call out my name                         2021       8		R&B                 		---
-40 Yesterday                                1965       8		Rock                		Top 40 Hit
-41 Compass                                  2018       8		Indie               		Top 40 Hit
-42 Easy on me                               2021       6		pop                 		---
-43 Figures                                  2018       8		R&B                 		---
-44 First Love / Late Spring                 2014      10		Indie               		Top 40 Hit
-45 Frozen                                   2017       5		R&B                 		Top 40 Hit
-46 Garden Grove                             1998      10		Reggae              		---
-47 Hey Jude                                 1968      10		Rock                		Top 40 Hit
-48 Har dil ki ava                           2014      10		Slow music          		Top 40 Hit
-49 Holy Ghost                               2015       8		Choir               		Top 40 Hit
-50 kal ho na ho                             2009       9		Punajbi             		---
-51 Let It Be                                1970       9		Rock                		Top 40 Hit
-52 Monks                                    2012      10		Pop                 		Top 40 Hit
-53 More Than a Woman                        1977       9		Pop                 		---
-54 nasha ha                                 2010       8		normal one          		---
-55 Out Tha Mud                              2015      10		Rap                 		---
-56 Phali dafa                               2017       9		urdu                		---
-57 Sea Dragon                               2018       9		Math Rock           		Top 40 Hit
-58 Slacker                                  2002      10		Rap                 		Top 40 Hit
-59 Something                                2015      10		R&B - Jazz          		Top 40 Hit
-60 Sweet Caroline                           1969      10		Rock                		Top 40 Hit
-61 Sweet Life                               2012       8		Pop                 		---
-62 Thank u - next                           2019       8		Pop                 		Top 40 Hit
-63 The Mountain Top                         2021      10		Video Game Soundtrack		---
-64 Tik Tok                                  2009       9		Pop                 		Top 40 Hit
-65 Tranquility Base Hotel & Casino          2018      10		Rock                		Top 40 Hit
-66 Wake Up                                  2015       9		Alternative         		---
-67 Hidden Figures                           2016       9		Drama               		Stars: Jaraji P Henson Octavia Spencer Janelle Monae 
-68 Africa                                   1982       7		rock                		Top 40 Hit
-69 Strawberry Fields Forever                1967       9		pop                 		Top 40 Hit
-70 Bohemian Rhapsody                        1975       8		rock                		Top 40 Hit
-71 Close Encounters                         1997       5		Science Fiction     		Weeks NYT: 5
-72 Lessons in Chemistry                     2022       5		Humor               		Weeks NYT: 5
-73 Yellow Submarine                         1966       8		pop                 		Top 40 Hit
+                                   
 
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+1    To Kill a Mockingbird              1962      5         Drama               Stars: Gregory Peck, Mary Badham
+2    Ferris Bueller's Day Off           1986      7         Comedy              Stars: Matthew Broderick, Alan Ruck, Jennifer Grey
+3    Rocky                              1976      7         Drama/Action        Stars: Sylvester Stallone, Carl Weathers
+4    Jaws                               1975      5         Drama/Action        Stars: Roy Scheider, Richard Dreyfuss
+5    Daughters of the Dust              1991      8         Drama               Stars: Alva Rogers, Cora Lee Day
+6    Raiders of the Lost Ark            1981      6         Action Adventure    Stars: Harrison Ford, Karen Allen
+7    Star Wars IV                       1977      6         Action Adventure    Stars: Mark Hamill, Carrie Fisher, Harrison Ford, Alec Guiness
+8    Mr. Holland's Opus                 1995      8         Drama/Musical       Stars: Richard Dreyfuss, Jay Thomas, Glenne Headly
+9    To Kill a Mockingbird              1960      8         Southern Gothic FictionWeeks NYT: 0
+10   Animal Farm                        1945      8         Allegory            Weeks NYT: 0
+11   The Great Gatsby                   1925      7         Modernist novel     Weeks NYT: 0
+12   The Catcher in the Rye             1951      3         Coming of Age       Weeks NYT: 0
+13   Lord of the Flies                  1954      6         Adventure           Weeks NYT: 0
+14   Of Mice and Men                    1937      5         Tragedy             Weeks NYT: 0
+15   Blade Runner 2049                  2017      9         Sci-Fi              Stars: Ryan Gosling, Harrison Ford
+16   Jurassic Park                      1993      8         Sci-Fi              Stars: Sam Neill, Jeff Goldblum
+17   Dune                               2021      7         Sci-Fi              Stars: Timothee Chalamet, Zendaya
+18   Fight Club                         1999      10        Drama               Stars: Brad Pitt, Edward Norton
+19   Percy Jackson and the Lightning Thief2010      2         Fantasy             Stars: Logan Lerman, Alexandra Daddario
+20   The Grand Budapest Hotel           2014      9         Adventure           Stars: Ralph Fiennes, Saoirse Ronan
+21   Superman                           1978      8         Sci-Fi              Stars: Christopher Reeve, Gene Hackman, Margo Kidder
+22   Spirited Away                      2002      8         Fantasy             Stars: Rumi Hiiragi, Miyu Irino
+23   Gone Girl                          2014      10        Thriller/Mystery    Stars: Ben Affleck, Rosamund Pike
+24   Moonlight                          2016      10        Drama               Stars: Mahershala Ali, Naomi Harris
+25   The Wolf of Wallstreet             2013      10        Comedy/Crime        Stars: Leonardo DiCaprio, Jonah Hill
+26   Crime and Punishment               1866      7         Crime Fiction       Weeks NYT: 0
+27   House of Leaves                    2000      9         Horror              Weeks NYT: 0
+28   I Can Teach You to Be Rich         2009      8         Self Help           Weeks NYT: 0
+29   Neuromancer                        1984      10        Cyberpunk           Weeks NYT: 0
+30   Percy Jackson and the Last Olympian2009      9         Fantasy             Weeks NYT: 0
+31   Six of Crows                       2015      10        Fantasy             Weeks NYT: 0
+32   The Alchemist                      1993      9         Adventure           Weeks NYT: 0
+33   The Goldfinch                      2013      10        Suspense            Weeks NYT: 0
+34   The Hunger Games                   2008      7         Action              Weeks NYT: 0
+35   The Music of Erich Zann            1921      10        Horror              Weeks NYT: 0
+36   Watchmen                           1987      8         Science Fiction     Weeks NYT: 0
+37   Way of kings                       2010      10        Fantasy             Weeks NYT: 0
+38   All Too Well                       2012      10        Pop                 ---
+39   Ball if I want to                  2021      10        Rap                 ---
+40   Call out my name                   2021      8         R&B                 ---
+41   Compass                            2018      8         Indie               ---
+42   Easy on me                         2021      6         pop                 ---
+43   Figures                            2018      8         R&B                 ---
+44   First Love / Late Spring           2014      10        Indie               ---
+45   Frozen                             2017      5         R&B                 ---
+46   Garden Grove                       1998      10        Reggae              ---
+47   Har dil ki ava                     2014      10        Slow music          ---
+48   Holy Ghost                         2015      8         Choir               ---
+49   kal ho na ho                       2009      9         Punajbi             ---
+50   Monks                              2012      10        Pop                 ---
+51   More Than a Woman                  1977      9         Pop                 ---
+52   nasha ha                           2010      8         normal one          ---
+53   Out Tha Mud                        2015      10        Rap                 ---
+54   Phali dafa                         2017      9         urdu                ---
+55   Sea Dragon                         2018      9         Math Rock           ---
+56   Slacker                            2002      10        Rap                 ---
+57   Something                          2015      10        R&B - Jazz          ---
+58   Stayin' Alive                      1979      10        Pop                 ---
+59   Sweet Caroline                     1969      10        Rock                ---
+60   Sweet Life                         2012      8         Pop                 ---
+61   Thank u - next                     2019      8         Pop                 ---
+62   The Mountain Top                   2021      10        Video Game Soundtrack---
+63   Tik Tok                            2009      9         Pop                 ---
+64   Tranquility Base Hotel & Casino    2018      10        Rock                ---
+65   Wake Up                            2015      9         Alternative         ---
+++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++
-YOUR MEDIA LIBRARY
-#   TYPE
-21   Movies    
-18   Books     
-34   Songs     
-73   Items     
+             MEDIA COUNTS
+
+Movies: 19
+Books:  18
+Songs:  28
+++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+             SONGS WITH GENRE >= -3
+
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+No items found with genre: -3
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+             BOOKS WITH RATING >= 8
+
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+1    To Kill a Mockingbird              1960      8         Southern Gothic FictionWeeks NYT: 0
+2    Animal Farm                        1945      8         Allegory            Weeks NYT: 0
+3    House of Leaves                    2000      9         Horror              Weeks NYT: 0
+4    I Can Teach You to Be Rich         2009      8         Self Help           Weeks NYT: 0
+5    Neuromancer                        1984      10        Cyberpunk           Weeks NYT: 0
+6    Percy Jackson and the Last Olympian2009      9         Fantasy             Weeks NYT: 0
+7    Six of Crows                       2015      10        Fantasy             Weeks NYT: 0
+8    The Alchemist                      1993      9         Adventure           Weeks NYT: 0
+9    The Goldfinch                      2013      10        Suspense            Weeks NYT: 0
+10   The Music of Erich Zann            1921      10        Horror              Weeks NYT: 0
+11   Watchmen                           1987      8         Science Fiction     Weeks NYT: 0
+12   Way of kings                       2010      10        Fantasy             Weeks NYT: 0
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+             SONGS WITH RATING >= 9
+
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+1    All Too Well                       2012      10        Pop                 ---
+2    Ball if I want to                  2021      10        Rap                 ---
+3    First Love / Late Spring           2014      10        Indie               ---
+4    Garden Grove                       1998      10        Reggae              ---
+5    Har dil ki ava                     2014      10        Slow music          ---
+6    kal ho na ho                       2009      9         Punajbi             ---
+7    Monks                              2012      10        Pop                 ---
+8    More Than a Woman                  1977      9         Pop                 ---
+9    Out Tha Mud                        2015      10        Rap                 ---
+10   Phali dafa                         2017      9         urdu                ---
+11   Sea Dragon                         2018      9         Math Rock           ---
+12   Slacker                            2002      10        Rap                 ---
+13   Something                          2015      10        R&B - Jazz          ---
+14   Stayin' Alive                      1979      10        Pop                 ---
+15   Sweet Caroline                     1969      10        Rock                ---
+16   The Mountain Top                   2021      10        Video Game Soundtrack---
+17   Tik Tok                            2009      9         Pop                 ---
+18   Tranquility Base Hotel & Casino    2018      10        Rock                ---
+19   Wake Up                            2015      9         Alternative         ---
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+             MEDIA WITH RATING >= 10
+
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+1    Fight Club                         1999      10        Drama               Stars: Brad Pitt, Edward Norton
+2    Gone Girl                          2014      10        Thriller/Mystery    Stars: Ben Affleck, Rosamund Pike
+3    Moonlight                          2016      10        Drama               Stars: Mahershala Ali, Naomi Harris
+4    The Wolf of Wallstreet             2013      10        Comedy/Crime        Stars: Leonardo DiCaprio, Jonah Hill
+5    Neuromancer                        1984      10        Cyberpunk           Weeks NYT: 0
+6    Six of Crows                       2015      10        Fantasy             Weeks NYT: 0
+7    The Goldfinch                      2013      10        Suspense            Weeks NYT: 0
+8    The Music of Erich Zann            1921      10        Horror              Weeks NYT: 0
+9    Way of kings                       2010      10        Fantasy             Weeks NYT: 0
+10   All Too Well                       2012      10        Pop                 ---
+11   Ball if I want to                  2021      10        Rap                 ---
+12   First Love / Late Spring           2014      10        Indie               ---
+13   Garden Grove                       1998      10        Reggae              ---
+14   Har dil ki ava                     2014      10        Slow music          ---
+15   Monks                              2012      10        Pop                 ---
+16   Out Tha Mud                        2015      10        Rap                 ---
+17   Slacker                            2002      10        Rap                 ---
+18   Something                          2015      10        R&B - Jazz          ---
+19   Stayin' Alive                      1979      10        Pop                 ---
+20   Sweet Caroline                     1969      10        Rock                ---
+21   The Mountain Top                   2021      10        Video Game Soundtrack---
+22   Tranquility Base Hotel & Casino    2018      10        Rock                ---
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Movie: Hidden Figureswas added to your list
+Song: Africawas added to your list
+Song: Strawberry Fields Foreverwas added to your list
+Song: Bohemian Rhapsodywas added to your list
+Book: Close Encounterswas added to your list
+Book: Lessons in Chemistrywas added to your list
+Song: Yellow Submarinewas added to your list
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+             SONGS WITH RATING >= 9
+
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+1    All Too Well                       2012      10        Pop                 ---
+2    Ball if I want to                  2021      10        Rap                 ---
+3    First Love / Late Spring           2014      10        Indie               ---
+4    Garden Grove                       1998      10        Reggae              ---
+5    Har dil ki ava                     2014      10        Slow music          ---
+6    kal ho na ho                       2009      9         Punajbi             ---
+7    Monks                              2012      10        Pop                 ---
+8    More Than a Woman                  1977      9         Pop                 ---
+9    Out Tha Mud                        2015      10        Rap                 ---
+10   Phali dafa                         2017      9         urdu                ---
+11   Sea Dragon                         2018      9         Math Rock           ---
+12   Slacker                            2002      10        Rap                 ---
+13   Something                          2015      10        R&B - Jazz          ---
+14   Stayin' Alive                      1979      10        Pop                 ---
+15   Sweet Caroline                     1969      10        Rock                ---
+16   The Mountain Top                   2021      10        Video Game Soundtrack---
+17   Tik Tok                            2009      9         Pop                 ---
+18   Tranquility Base Hotel & Casino    2018      10        Rock                ---
+19   Wake Up                            2015      9         Alternative         ---
+20   Strawberry Fields Forever          1967      9         pop                 Top 40 Hit
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+             BOOKS WITH RATING >= 7
+
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+1    To Kill a Mockingbird              1960      8         Southern Gothic FictionWeeks NYT: 0
+2    Animal Farm                        1945      8         Allegory            Weeks NYT: 0
+3    The Great Gatsby                   1925      7         Modernist novel     Weeks NYT: 0
+4    Crime and Punishment               1866      7         Crime Fiction       Weeks NYT: 0
+5    House of Leaves                    2000      9         Horror              Weeks NYT: 0
+6    I Can Teach You to Be Rich         2009      8         Self Help           Weeks NYT: 0
+7    Neuromancer                        1984      10        Cyberpunk           Weeks NYT: 0
+8    Percy Jackson and the Last Olympian2009      9         Fantasy             Weeks NYT: 0
+9    Six of Crows                       2015      10        Fantasy             Weeks NYT: 0
+10   The Alchemist                      1993      9         Adventure           Weeks NYT: 0
+11   The Goldfinch                      2013      10        Suspense            Weeks NYT: 0
+12   The Hunger Games                   2008      7         Action              Weeks NYT: 0
+13   The Music of Erich Zann            1921      10        Horror              Weeks NYT: 0
+14   Watchmen                           1987      8         Science Fiction     Weeks NYT: 0
+15   Way of kings                       2010      10        Fantasy             Weeks NYT: 0
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+             BOOKS WITH GENRE >= Suspense
+
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+1    The Goldfinch                      2013      10        Suspense            Weeks NYT: 0
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+             SONGS WITH GENRE >= R&B
+
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+1    Call out my name                   2021      8         R&B                 ---
+2    Figures                            2018      8         R&B                 ---
+3    Frozen                             2017      5         R&B                 ---
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+             SONGS WITH GENRE >= Rock
+
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+1    Sweet Caroline                     1969      10        Rock                ---
+2    Tranquility Base Hotel & Casino    2018      10        Rock                ---
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+MOVIES WITH STAR: Hidden Figures
+
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+MOVIES WITH STAR: Lost
+
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+MOVIES WITH STAR: Dune
+
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+MOVIES WITH ACTOR: Octavia Spencer
+
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+1    Hidden Figures                     2016      9         Drama               Stars: Jaraji P Henson, Octavia Spencer, Janelle Monae
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+MOVIES WITH ACTOR: Harrison Ford
+
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+1    Raiders of the Lost Ark            1981      6         Action Adventure    Stars: Harrison Ford, Karen Allen
+2    Star Wars IV                       1977      6         Action Adventure    Stars: Mark Hamill, Carrie Fisher, Harrison Ford, Alec Guiness
+3    Blade Runner 2049                  2017      9         Sci-Fi              Stars: Ryan Gosling, Harrison Ford
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+MOVIES WITH ACTOR: Victor Lee
+
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+MEDIA BY NAME: Harrison Ford
+
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+MEDIA BY NAME: Steven Spielberg
+
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+1    Jaws                               1975      5         Drama/Action        Stars: Roy Scheider, Richard Dreyfuss
+2    Jurassic Park                      1993      8         Sci-Fi              Stars: Sam Neill, Jeff Goldblum
+3    Close Encounters                   1997      5         Science Fiction     Weeks NYT: 5
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+MEDIA BY NAME: Bee Gees
+
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+1    More Than a Woman                  1977      9         Pop                 ---
+2    Stayin' Alive                      1979      10        Pop                 ---
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+MEDIA BY NAME: Beatles
+
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+1    Strawberry Fields Forever          1967      9         pop                 Top 40 Hit
+2    Yellow Submarine                   1966      8         pop                 Top 40 Hit
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+             YOUR MEDIA LIST
+
+                                   
+
+#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS
+1    To Kill a Mockingbird              1962      5         Drama               Stars: Gregory Peck, Mary Badham
+2    Ferris Bueller's Day Off           1986      7         Comedy              Stars: Matthew Broderick, Alan Ruck, Jennifer Grey
+3    Rocky                              1976      7         Drama/Action        Stars: Sylvester Stallone, Carl Weathers
+4    Jaws                               1975      5         Drama/Action        Stars: Roy Scheider, Richard Dreyfuss
+5    Daughters of the Dust              1991      8         Drama               Stars: Alva Rogers, Cora Lee Day
+6    Raiders of the Lost Ark            1981      6         Action Adventure    Stars: Harrison Ford, Karen Allen
+7    Star Wars IV                       1977      6         Action Adventure    Stars: Mark Hamill, Carrie Fisher, Harrison Ford, Alec Guiness
+8    Mr. Holland's Opus                 1995      8         Drama/Musical       Stars: Richard Dreyfuss, Jay Thomas, Glenne Headly
+9    To Kill a Mockingbird              1960      8         Southern Gothic FictionWeeks NYT: 0
+10   Animal Farm                        1945      8         Allegory            Weeks NYT: 0
+11   The Great Gatsby                   1925      7         Modernist novel     Weeks NYT: 0
+12   The Catcher in the Rye             1951      3         Coming of Age       Weeks NYT: 0
+13   Lord of the Flies                  1954      6         Adventure           Weeks NYT: 0
+14   Of Mice and Men                    1937      5         Tragedy             Weeks NYT: 0
+15   Blade Runner 2049                  2017      9         Sci-Fi              Stars: Ryan Gosling, Harrison Ford
+16   Jurassic Park                      1993      8         Sci-Fi              Stars: Sam Neill, Jeff Goldblum
+17   Dune                               2021      7         Sci-Fi              Stars: Timothee Chalamet, Zendaya
+18   Fight Club                         1999      10        Drama               Stars: Brad Pitt, Edward Norton
+19   Percy Jackson and the Lightning Thief2010      2         Fantasy             Stars: Logan Lerman, Alexandra Daddario
+20   The Grand Budapest Hotel           2014      9         Adventure           Stars: Ralph Fiennes, Saoirse Ronan
+21   Superman                           1978      8         Sci-Fi              Stars: Christopher Reeve, Gene Hackman, Margo Kidder
+22   Spirited Away                      2002      8         Fantasy             Stars: Rumi Hiiragi, Miyu Irino
+23   Gone Girl                          2014      10        Thriller/Mystery    Stars: Ben Affleck, Rosamund Pike
+24   Moonlight                          2016      10        Drama               Stars: Mahershala Ali, Naomi Harris
+25   The Wolf of Wallstreet             2013      10        Comedy/Crime        Stars: Leonardo DiCaprio, Jonah Hill
+26   Crime and Punishment               1866      7         Crime Fiction       Weeks NYT: 0
+27   House of Leaves                    2000      9         Horror              Weeks NYT: 0
+28   I Can Teach You to Be Rich         2009      8         Self Help           Weeks NYT: 0
+29   Neuromancer                        1984      10        Cyberpunk           Weeks NYT: 0
+30   Percy Jackson and the Last Olympian2009      9         Fantasy             Weeks NYT: 0
+31   Six of Crows                       2015      10        Fantasy             Weeks NYT: 0
+32   The Alchemist                      1993      9         Adventure           Weeks NYT: 0
+33   The Goldfinch                      2013      10        Suspense            Weeks NYT: 0
+34   The Hunger Games                   2008      7         Action              Weeks NYT: 0
+35   The Music of Erich Zann            1921      10        Horror              Weeks NYT: 0
+36   Watchmen                           1987      8         Science Fiction     Weeks NYT: 0
+37   Way of kings                       2010      10        Fantasy             Weeks NYT: 0
+38   All Too Well                       2012      10        Pop                 ---
+39   Ball if I want to                  2021      10        Rap                 ---
+40   Call out my name                   2021      8         R&B                 ---
+41   Compass                            2018      8         Indie               ---
+42   Easy on me                         2021      6         pop                 ---
+43   Figures                            2018      8         R&B                 ---
+44   First Love / Late Spring           2014      10        Indie               ---
+45   Frozen                             2017      5         R&B                 ---
+46   Garden Grove                       1998      10        Reggae              ---
+47   Har dil ki ava                     2014      10        Slow music          ---
+48   Holy Ghost                         2015      8         Choir               ---
+49   kal ho na ho                       2009      9         Punajbi             ---
+50   Monks                              2012      10        Pop                 ---
+51   More Than a Woman                  1977      9         Pop                 ---
+52   nasha ha                           2010      8         normal one          ---
+53   Out Tha Mud                        2015      10        Rap                 ---
+54   Phali dafa                         2017      9         urdu                ---
+55   Sea Dragon                         2018      9         Math Rock           ---
+56   Slacker                            2002      10        Rap                 ---
+57   Something                          2015      10        R&B - Jazz          ---
+58   Stayin' Alive                      1979      10        Pop                 ---
+59   Sweet Caroline                     1969      10        Rock                ---
+60   Sweet Life                         2012      8         Pop                 ---
+61   Thank u - next                     2019      8         Pop                 ---
+62   The Mountain Top                   2021      10        Video Game Soundtrack---
+63   Tik Tok                            2009      9         Pop                 ---
+64   Tranquility Base Hotel & Casino    2018      10        Rock                ---
+65   Wake Up                            2015      9         Alternative         ---
+66   Hidden Figures                     2016      9         Drama               Stars: Jaraji P Henson, Octavia Spencer, Janelle Monae
+67   Africa                             1982      7         rock                Top 40 Hit
+68   Strawberry Fields Forever          1967      9         pop                 Top 40 Hit
+69   Bohemian Rhapsody                  1975      8         rock                Top 40 Hit
+70   Close Encounters                   1997      5         Science Fiction     Weeks NYT: 5
+71   Lessons in Chemistry               2022      5         Humor               Weeks NYT: 5
+72   Yellow Submarine                   1966      8         pop                 Top 40 Hit
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+             MEDIA COUNTS
+
+Movies: 20
+Books:  20
+Songs:  32
+++++++++++++++++++++++++++++++++++++++++++++++++++++
 

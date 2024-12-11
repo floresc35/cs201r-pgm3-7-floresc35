@@ -16,136 +16,188 @@ bool isDigits(string str1) {
 }
 //used llm to create parsing function
 Media* parseMedia(const string& line, ostream& outErr) {
-    istringstream stream(line);
-    string typeStr, title, name, ratingStr, genre, lengthStr, yearReleasedStr, extraField;
-    int rating, length, yearReleased;
+    stringstream stream(line);
+    string typeStr, title, name, ratingStr, genre, lengthStr, yearStr;
 
     // Debugging: Print the line being processed
     //cout << "Parsing line: " << line << endl; // This will show us the line being processed
 
+    
+
     // extract required fields
-    if (!(getline(stream, typeStr, ',') &&
-          getline(stream, title, ',') &&
-          getline(stream, name, ',') &&
-          getline(stream, ratingStr, ',') &&
-          getline(stream, genre, ',') &&
-          getline(stream, lengthStr, ',') &&
-          getline(stream, yearReleasedStr, ','))) {
-        outErr << "ERROR: Incomplete or malformed record: " << line << endl;
+    if (!getline(stream, typeStr, ',') ||
+          !getline(stream, title, ',') ||
+          !getline(stream, name, ',') ||
+          !getline(stream, ratingStr, ',') ||
+          !getline(stream, genre, ',') ||
+          !getline(stream, lengthStr, ',') ||
+          !getline(stream, yearStr, ',')) {
+        outErr << "ERROR: " << line << "\nPrevious record has an invalid stoi argument error\n\n";
         return nullptr;
     }
 
-    // attempt to convert string fields to integers
     try {
-        rating = stoi(ratingStr);
-        length = stoi(lengthStr);
-        yearReleased = stoi(yearReleasedStr);
-    } catch (const invalid_argument&) {
-        outErr << "ERROR:" << line << "\nPrevious record has an invalid stoi argument error" << endl;
-        return nullptr;
-    }
+        int rating = stoi(ratingStr);
+        int length = stoi(lengthStr);
+        int year = stoi(yearStr);
+        
+        if (!validateMedia(typeStr[0], title, name, rating, genre, length, year, 0, outErr)) {
+            return nullptr;
+        }
 
-    // validate numeric ranges
-    if (rating < 1 || rating > 10) {
-        outErr << "ERROR:" << line << "\nThere was an invalid value entered for rating" << endl;
-        return nullptr;
-    }
-    if (length < 0) { 
-        outErr << "ERROR:" << line << "\nThere was an invalid value entered for length" << endl;
-        return nullptr;
-    }
-    if (yearReleased < 1920 || yearReleased > 2022) {
-        outErr << "ERROR:" << line << "\nThere was an invalid value entered for rating" << endl;
-        return nullptr;
-    }
-    // determine type and create the appropriate derived object
-    char type = typeStr[0];
-    if (type == 'M') {
-        vector<string> stars;
-        while (getline(stream, extraField, ',')) {
-            stars.push_back(extraField);
+        if (typeStr[0] == 'M') {
+            vector<string> stars;
+            string star;
+            while (getline(stream, star, ',')) {
+                if (!star.empty()) stars.push_back(star);
+            }
+            return new Movie(title, name, rating, genre, length, year, stars);
         }
-        return new Movie(type, title, name, rating, genre, length, yearReleased, stars);
-    } else if (type == 'B') {
-        int weeksNYT;
-        if (!(stream >> weeksNYT)) {
-            outErr << "ERROR:" << line << "\nMissing weeksNYT field in record " << endl;
+        else if (typeStr[0] == 'B') {
+            string weeks;
+            getline(stream, weeks, ',');
+            try {
+                int weeksNYT = weeks.empty() ? 0 : stoi(weeks);
+                return new Book(title, name, rating, genre, length, year, weeksNYT);
+            }
+            catch (...) {
+                outErr << "Previous record has an invalid stoi argument error\n\n";
+                return nullptr;
+            }
+        }
+        else if (typeStr[0] == 'S') {
+    string top40Str;
+    getline(stream, top40Str);
+    
+    // Remove trailing commas and whitespace
+    while (!top40Str.empty() && (top40Str.back() == ',' || isspace(top40Str.back()))) {
+        top40Str.pop_back();
+    }
+    
+    // Default to not top40 (0) if field is empty
+    bool isTop40 = false;
+    if (!top40Str.empty()) {
+        if (top40Str != "0" && top40Str != "1") {
+            outErr << "Previous record has an error in boolean value\n\n";
             return nullptr;
         }
-        return new Book(type, title, name, rating, genre, length, yearReleased, weeksNYT);
-    } else if (type == 'S') {
-        int top40;
-        if (!(stream >> top40) || (top40 != 0 && top40 != 1)) {
-            outErr << "ERROR:" << line << "\nInvalid top40 field in recorn" << endl;
-            return nullptr;
-        }
-        return new Song(type, title, name, rating, genre, length, yearReleased, top40 == 1);
-    } else {
-        outErr << "ERROR:" << line << "\nInvalid type field in record" << endl;
+        isTop40 = (top40Str == "1");
+    }
+    
+    return new Song(title, name, rating, genre, length, year, isTop40);
+}
+    }
+    catch (...) {
+        outErr << "ERROR: " << line << "\n"
+               << "Previous record has an invalid stoi argument error\n\n";
         return nullptr;
     }
+    return nullptr;
 }
 
-//readDataFile(inFile,errFile,vector<Media*>);
-//readCommandFile(currRecord, outFile, errFile, vector<Media*>);
 // print all media or filtered by command (based on type)
-void printReport(const string& currRecord, ostream& outFile, ostream& outErr, const vector<Media*>& mediaLib) {
+void printReport(const string& currRecord, ostream& outFile, ostream& outErr, 
+                const vector<Media*>& mediaLib) {
     char type = currRecord[0];
-
-    if (type == 'M') outFile << "++++++++++++++++++++++++++++++++++++++++++++++++++++\n             YOUR MOVIE LIST\n\n";
-    else if (type == 'B') outFile << "++++++++++++++++++++++++++++++++++++++++++++++++++++\n             YOUR BOOK LIST\n\n";
-    else if (type == 'S') outFile << "++++++++++++++++++++++++++++++++++++++++++++++++++++\n             YOUR SONG LIST\n\n";
-    else outFile << "++++++++++++++++++++++++++++++++++++++++++++++++++++\n             YOUR MEDIA LIST\n\n";
-
-    outFile << "#           TITLE                           YEAR    RATING      GENRE						OTHER FIELDS\n";
+    outFile << "\n++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+    
+    string title;
+    switch(type) {
+        case 'M': outFile << "             YOUR MOVIE LIST\n\n"; break;
+        case 'B': outFile << "             YOUR BOOK LIST\n\n"; break;
+        case 'S': outFile << "             YOUR SONG LIST\n\n"; break;
+        case 'A': outFile << "             YOUR MEDIA LIST\n\n"; break;
+    }
+    outFile << setw(35) << title << "\n\n";
+    outFile << "#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS\n";
 
     int count = 1;
     for (const auto& media : mediaLib) {
-        if (type == 'A' || media->getType() == type) {
-        outFile << setw(3) << count++ << "  ";
+        if (type == 'A' || (type != 'A' && media->getType() == type)) {
+            outFile << setw(3) << count++ << "  ";
             media->print(outFile);
+        }
+    }
+    
+    outFile << "++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n";
+}
+
+
+// print media by specified genre
+void printReportGenre(const string& currRecord, ostream& outFile, ostream& outErr, 
+                     const vector<Media*>& mediaLib) {
+    char type = currRecord[0];
+    string genre = currRecord.substr(2);
+    
+    outFile << "\n++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+    string mediaType;
+    switch(type) {
+        case 'M': mediaType = "MOVIES"; break;
+        case 'B': mediaType = "BOOKS"; break;
+        case 'S': mediaType = "SONGS"; break;
+        default: mediaType = "MEDIA";
+    }
+    outFile << "             " << mediaType << " WITH GENRE >= " << genre << "\n\n";
+    outFile << "#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS\n";
+
+    int count = 1;
+    bool found = false;
+    for (const auto& media : mediaLib) {
+        if ((type == 'A' || media->getType() == type) && media->getGenre() == genre) {
+            outFile << setw(3) << count++ << "  ";
+            media->print(outFile);
+            found = true;
+        }
+    }
+    
+    if (!found) {
+        if (genre == "none") {
+            outErr << "Unable to process command. The genre: none is not found in your list\n\n";
+        } else {
+            outFile << "No items found with genre: " << genre << endl;
         }
     }
     outFile << "++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n";
 }
 
 
-// print media by specified genre
-void printReportGenre(const string& command, ostream& outFile, ostream& outErr, const vector<Media*>& mediaLib) {
-    char type = command[0];
-    string genre = command.substr(2);  // Get the genre after the comma
-    bool found = false;
-
-    for (const auto& media : mediaLib) {
-        if ((type == 'A' || media->getType() == type) && media->getGenre() == genre) {
-            media->print(outFile);  // Log genre-based media to file
-            found = true;
-        }
-    }
-
-    if (!found) {
-        outFile << "No items found with genre: " << genre << endl;
-    }
-}
-
-
 // print media by rating
-void printReportRating(const string& currRecord, ostream& outFile, ostream& outErr, const vector<Media*>& mediaLib) {
+void printReportRating(const string& currRecord, ostream& outFile, ostream& outErr, 
+                      const vector<Media*>& mediaLib) {
     char type = currRecord[0];
     int rating = stoi(currRecord.substr(2));
+    
+    outFile << "\n++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+    string mediaType;
+    switch(type) {
+        case 'M': mediaType = "MOVIES"; break;
+        case 'B': mediaType = "BOOKS"; break;
+        case 'S': mediaType = "SONGS"; break;
+        default: mediaType = "MEDIA";
+    }
+    outFile << "             " << mediaType << " WITH RATING >= " << rating << "\n\n";
+    outFile << "#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS\n";
+
+    int count = 1;
     bool found = false;
     for (const auto& media : mediaLib) {
         if ((type == 'A' || media->getType() == type) && media->getRating() >= rating) {
+            outFile << setw(3) << count++ << "  ";
             media->print(outFile);
             found = true;
         }
     }
-    if (!found) outFile << "No items found with rating >= " << rating << endl;
+    
+    if (!found) {
+        outFile << "No items found with rating >= " << rating << endl;
+    }
+    outFile << "++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n";
 }
 
 // print totals of each media type
 void printTotals(ostream& outFile, const vector<Media*>& mediaLib) {
     int movies = 0, books = 0, songs = 0;
+    
     for (const auto& media : mediaLib) {
         switch (media->getType()) {
             case 'M': ++movies; break;
@@ -153,39 +205,27 @@ void printTotals(ostream& outFile, const vector<Media*>& mediaLib) {
             case 'S': ++songs; break;
         }
     }
-    outFile << "Movies: " << movies << ", Books: " << books << ", Songs: " << songs << endl;
+    
+    outFile << "\n++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+    outFile << "             MEDIA COUNTS\n\n";
+    outFile << "Movies: " << movies << "\n";
+    outFile << "Books:  " << books << "\n";
+    outFile << "Songs:  " << songs << "\n";
+    outFile << "++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n";
 }
 // add new media based on command input
 void addContent(const string& currRecord, ostream& outFile, ostream& outErr, vector<Media*>& mediaLib) {
-    istringstream stream(currRecord.substr(2));
-    char type;
-    string title, name, genre, starsField;
-    int rating, length, yearReleased, additionalField;
-
-    stream >> type >> title >> name >> rating >> genre >> length >> yearReleased;
-
-    if (type == 'M') {
-        getline(stream, starsField);
-        vector<string> stars;
-        istringstream starStream(starsField);
-        string star;
-        while (getline(starStream, star, ',')) {
-            stars.push_back(star);
-        }
-        mediaLib.push_back(new Movie(type, title, name, rating, genre, length, yearReleased, stars));
-    } else if (type == 'B') {
-        stream >> additionalField;
-        mediaLib.push_back(new Book(type, title, name, rating, genre, length, yearReleased, additionalField));
-    } else if (type == 'S') {
-        stream >> additionalField;
-        mediaLib.push_back(new Song(type, title, name, rating, genre, length, yearReleased, additionalField == 1));
-    } else {
-        outErr << "ERROR:" << type << "Invalid type for new content" << "\n";
+    Media* newMedia = parseMedia(currRecord.substr(2), outErr);
+    if (newMedia != nullptr) {
+        mediaLib.push_back(newMedia);
+        outFile << (newMedia->getType() == 'M' ? "Movie" : 
+                                   newMedia->getType() == 'B' ? "Book" : "Song")
+                << ": " << newMedia->getTitle() << "was added to your list" << "\n";
     }
 }
 
 
-void readMediaData(const string& filename, vector<Media*>& mediaList, ostream& errorFile) {
+void readMediaData(const string& filename, vector<Media*>& mediaLib, ostream& errorFile) {
     ifstream inputFile(filename);
     if (!inputFile) {
         throw runtime_error("Unable to open media list file.");
@@ -193,171 +233,167 @@ void readMediaData(const string& filename, vector<Media*>& mediaList, ostream& e
 
     string line;
     while (getline(inputFile, line)) {
-        stringstream ss(line);
-        char type;
-        string title, keyName, genre, starsField;
-        int rating, length, yearReleased, additionalField = 0; // additionalField: weeksNYT or top40
-
-        try {
-            // parse data
-            ss >> type >> title >> keyName >> rating >> genre >> length >> yearReleased;
-
-            // additional field handling for each type
-            if (type == 'M') { // Movie
-                getline(ss, starsField); // comma-separated list of stars
-            } else if (type == 'B') { // book
-                ss >> additionalField; // weeksNYT
-            } else if (type == 'S') { // song
-                ss >> additionalField; // top40 (1 or 0)
-            }
-
-            // validate data
-            if (!validateMedia(type, title, keyName, rating, genre, length, yearReleased, additionalField, errorFile)) {
-                errorFile << "ERROR: Record skipped due to validation failure: " << line << endl;
-                continue; // skip invalid entries
-            }
-
-            // create object dynamically and add to the list
-            if (type == 'M') {
-                vector<string> stars;
-                stringstream starsStream(starsField);
-                string star;
-                while (getline(starsStream, star, ',')) {
-                    stars.push_back(star);
-                }
-                mediaList.push_back(new Movie(type, title, keyName, rating, genre, length, yearReleased, stars));
-            } else if (type == 'B') {
-                mediaList.push_back(new Book(type, title, keyName, rating, genre, length, yearReleased, additionalField));
-            } else if (type == 'S') {
-                mediaList.push_back(new Song(type, title, keyName, rating, genre, length, yearReleased, additionalField == 1));
-            }
-        } catch (const exception& e) {
-            errorFile << "Error parsing line: " << line << " - " << e.what() << endl;
+        if (line.empty() || line == "Q") continue;
+        
+        Media* newMedia = parseMedia(line, errorFile);
+        if (newMedia != nullptr) {
+            mediaLib.push_back(newMedia);
         }
     }
-
     inputFile.close();
 }
 
 bool validateMedia(const char type, const string& title, const string& keyName, int rating, const string& genre,
                    int length, int yearReleased, int additionalField, ostream& errorFile) {
-    bool isValid = true;
-    // "Unable to process command. There was an invalid value entered for" << _____ << ": " << _____ << endl;
-    // if statement for if rating isn't found for a movie, book, or song, then it is invalid
-    if (type != 'M' && type != 'B' && type != 'S') {
-        errorFile << "Invalid type: " << type << endl;
-        isValid = false;
-    }
-    if (rating <= 0 || rating > 10) {
-        errorFile << "The rating provided: " << rating << " is invalid" << endl;
-        isValid = false;
-    }
-    if (yearReleased < 1920 || yearReleased > 2024) {
-        errorFile << "Invalid year released for " << title << ": " << yearReleased << endl;
-        isValid = false;
-    }
-    if (type == 'B' && additionalField <= 0) {
-        errorFile << "Invalid weeksNYT for " << title << ": " << additionalField << endl;
-        isValid = false;
-    }
-    if (type == 'S' && (additionalField != 0 && additionalField != 1)) {
-        errorFile << "Invalid top40 value for " << title << ": " << additionalField << endl;
-        isValid = false;
+    // rating (1-10)
+    if (rating < 1 || rating > 10) {
+        errorFile << "ERROR: " << type << "," << title << "," << keyName << "," << rating << "," << genre << "," << length << "," << yearReleased << "," << additionalField << "\nThere was an invalid value entered for rating." << endl;
+        return false;
     }
 
-    return isValid;
+    // year (1800-2024)
+    if (yearReleased < 1800 || yearReleased > 2022) {
+        errorFile << "ERROR: " << type << "," << title << "," << keyName << "," << rating << "," << genre << "," << length << "," << yearReleased << "," << additionalField << "\nThere was an invalid value entered for year." << endl;
+        return false;
+    }
+
+    return true;
 }
 
-void listStars(const std::string& searchTerm, const vector<Media*>& mediaList) {
-    for (const auto& media : mediaList) {
+void listStars(const std::string& searchTerm, const vector<Media*>& mediaLib, ofstream& outFile, ofstream& outErr) {
+    outFile << "\n++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+    outFile << "MOVIES WITH STAR: " << searchTerm << "\n\n";
+    outFile << "#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS\n";
+    
+    int count = 1;
+    bool found = false;
+    for (const auto& media : mediaLib) {
         if (media->getType() == 'M') {
             Movie* movie = static_cast<Movie*>(media);
-            for (const auto& star : movie->getStars()) {
-                if (star.find(searchTerm) != string::npos) {
-                    std::cout << "Star found: " << star << " in movie: " << movie->getTitle() << "\n";
+            if (movie->hasActor(searchTerm)) {
+                outFile << setw(3) << count++ << "  ";
+                movie->print(outFile);
+                found = true;
                 }
             }
         }
-    }
+        if (!found) {
+            outErr << "Unable to process command. The movie: '" << searchTerm 
+                << "' is not found in your list\n\n";
+        }
+        outFile << "++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n";
 }
 
-void findMovies(const std::string& searchTerm, const std::vector<Media*>& mediaList) {
-    for (const auto& media : mediaList) {
+void findMovies(const std::string& searchTerm, const std::vector<Media*>& mediaLib,ofstream& outFile, ofstream& outErr) {
+    outFile << "\n++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+    outFile << "MOVIES WITH ACTOR: " << searchTerm << "\n\n";
+    outFile << "#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS\n";
+    
+    int count = 1;
+    bool found = false;
+    for (const auto& media : mediaLib) {
         if (media->getType() == 'M') {
             Movie* movie = static_cast<Movie*>(media);
-            if (movie->getTitle().find(searchTerm) != std::string::npos) {
-                std::cout << "Movie found: " << movie->getTitle() << endl;
-            }
-            for (const auto& star : movie->getStars()) {
-                if (star.find(searchTerm) != string::npos) {
-                    std::cout << "Star match: " << star << " in movie: " << movie->getTitle() << "\n";
-                }
+            if (movie->hasActor(searchTerm)) {
+                outFile << setw(3) << count++ << "  ";
+                movie->print(outFile);
+                found = true;
             }
         }
     }
+
+    if (!found) {
+        outErr << "Unable to process command. The star: " << searchTerm 
+               << " is not found in any movies in your list\n\n";
+    }
+    outFile << "++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n";
 }
 
-void findMediaByName(const std::string& searchTerm, const std::vector<Media*>& mediaList) {
-    for (const auto& media : mediaList) {
+
+void findMediaByName(const std::string& searchTerm, const std::vector<Media*>& mediaLib, ofstream& outFile, ofstream& outErr) {
+    outFile << "\n++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+    outFile << "MEDIA BY NAME: " << searchTerm << "\n\n";
+    outFile << "#  TITLE                           YEAR    RATING      GENRE                    OTHER FIELDS\n";
+    
+    int count = 1;
+    bool found = false;
+    for (const auto& media : mediaLib) {
         if (media->getName() == searchTerm) {
-            std::cout << "Media found: ";
-            media->print(std::cout);
+            outFile << setw(3) << count++ << "  ";
+            media->print(outFile);
+            found = true;
         }
+    }
+    
+    if (!found) {
+        outErr << "Unable to process command. The name: " << searchTerm 
+               << " was not found in your list\n\n";
     }
 }
 
-void executeCommands(ifstream& inFile, vector<Media*>& mediaList, 
+void executeCommands(ifstream& inFile, vector<Media*>& mediaLib, 
                     ofstream& outFile, ofstream& outErr) {
     string line;
     while (getline(inFile, line)) {
         if (line.empty()) continue;
         
-        stringstream ss(line);
-        string command;
-        getline(ss, command, ',');
-
-        if (command == "Q") {
+        char command = line[0];
+        
+        // handle Q command
+        if (command == 'Q') {
             cout << "Thank You for Using Media Everywhere" << endl;
             break;
         }
-        // single letter (A, M, B, S, T)
-        if (command.length() == 1) {
-            switch(command[0]) {
+        
+
+        // basic commands without parameters
+        if (line.length() == 1) {
+            switch(command) {
                 case 'A':
                 case 'M':
                 case 'B':
                 case 'S':
-                    printReport(line, outFile, outErr, mediaList);
+                    printReport(string(1, command), outFile, outErr, mediaLib);
                     break;
                 case 'T':
-                    printTotals(outFile, mediaList);
+                    printTotals(outFile, mediaLib);
                     break;
             }
+            continue;
         }
+
         // commands with parameters
-        else if (command.length() > 1) {
-            char cmdType = command[0];
-            switch(cmdType) {
+        if (line.length() > 2) {
+            string params = line.substr(2);
+            switch(command) {
                 case 'N':
-                    addContent(line, outFile, outErr, mediaList);
+                    addContent(line, outFile, outErr, mediaLib);
                     break;
                 case 'L':
-                    listStars(line.substr(2), mediaList);
+                    listStars(params, mediaLib, outFile, outErr);
                     break;
                 case 'F':
-                    findMovies(line.substr(2), mediaList);
+                    findMovies(params, mediaLib, outFile, outErr);
                     break;
                 case 'K':
-                    findMediaByName(line.substr(2), mediaList);
+                    findMediaByName(params, mediaLib, outFile, outErr);
                     break;
                 case 'A':
                 case 'M':
                 case 'B':
                 case 'S':
-                    if (isDigits(line.substr(2)))
-                        printReportRating(line, outFile, outErr, mediaList);
-                    else
-                        printReportGenre(line, outFile, outErr, mediaList);
+                    if (isDigits(params)) {
+                        int rating = stoi(params);
+                        if (rating < 1 || rating > 10) {
+                            outErr << "The rating provided: " << rating << " is invalid\n\n";
+                            continue;
+                        }
+                        printReportRating(line, outFile, outErr, mediaLib);
+                    } else if (params == "none") {
+                        outErr << "Unable to process command. The genre: none is not found in your list\n\n";
+                    } else {
+                        printReportGenre(line, outFile, outErr, mediaLib);
+                    }
                     break;
             }
         }
