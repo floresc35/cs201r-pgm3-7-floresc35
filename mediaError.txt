@@ -1,0 +1,259 @@
+The rating provided: 0 is invalid
+Invalid year released for ,To: 0
+ERROR: Record skipped due to validation failure: M,To Kill a Mockingbird,Horton Foote,5,Drama,129,1962,Gregory Peck,Mary Badham,,
+The rating provided: 0 is invalid
+Invalid year released for ,Ferris: 0
+ERROR: Record skipped due to validation failure: M,Ferris Bueller's Day Off,John Hughes,7,Comedy,103,1986,Matthew Broderick,Alan Ruck,Jennifer Grey,
+The rating provided: 0 is invalid
+Invalid year released for ,Rocky,Sylvester: 0
+ERROR: Record skipped due to validation failure: M,Rocky,Sylvester Stallone,7,Drama/Action,119,1976,Sylvester Stallone,Carl Weathers,,
+The rating provided: 0 is invalid
+Invalid year released for ,Jaws,Steven: 0
+ERROR: Record skipped due to validation failure: M,Jaws,Steven Spielberg,5,Drama/Action,129,1975,Roy Scheider,Richard Dreyfuss,,
+The rating provided: 0 is invalid
+Invalid year released for ,Daughters: 0
+ERROR: Record skipped due to validation failure: M,Daughters of the Dust,Julie Dash,8,Drama,112,1991,Alva Rogers,Cora Lee Day,,
+The rating provided: 0 is invalid
+Invalid year released for ,Raiders: 0
+ERROR: Record skipped due to validation failure: M,Raiders of the Lost Ark,George Lucas,6,Action Adventure,115,1981,Harrison Ford,Karen Allen,,
+The rating provided: 0 is invalid
+Invalid year released for ,Star: 0
+ERROR: Record skipped due to validation failure: M,Star Wars IV,George Lucas,6,Action Adventure,121,1977,Mark Hamill,Carrie Fisher,Harrison Ford,Alec Guiness
+The rating provided: 0 is invalid
+Invalid year released for ,Hidden: 0
+ERROR: Record skipped due to validation failure: M,Hidden Figures,9,Drama,126,2016,Jaraji P Henson,Octavia Spencer,Janelle Monae,,
+The rating provided: 0 is invalid
+Invalid year released for ,Mr.: 0
+ERROR: Record skipped due to validation failure: M,Mr. Holland's Opus,Stephen Herek,8,Drama/Musical,143,1995,Richard Dreyfuss,Jay Thomas,Glenne Headly,
+The rating provided: 0 is invalid
+Invalid year released for ,To: 0
+Invalid weeksNYT for ,To: 0
+ERROR: Record skipped due to validation failure: B,To Kill a Mockingbird,Harper Lee,8,Southern Gothic Fiction,281,1960,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Hamlet,William: 0
+Invalid weeksNYT for ,Hamlet,William: 0
+ERROR: Record skipped due to validation failure: B,Hamlet,William Shakespeare,4,Tragedy,214,1600,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Fahrenheit: 0
+Invalid weeksNYT for ,Fahrenheit: 0
+ERROR: Record skipped due to validation failure: B,Fahrenheit 451,Ray Bradbury,Science Fiction,256,1953,,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Animal: 0
+Invalid weeksNYT for ,Animal: 0
+ERROR: Record skipped due to validation failure: B,Animal Farm, George Orwell,8,Allegory,112,1945,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,The: 0
+Invalid weeksNYT for ,The: 0
+ERROR: Record skipped due to validation failure: B,The Great Gatsby,F.Scott Fitzgerald,7,Modernist novel,205,1925,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,The: 0
+Invalid weeksNYT for ,The: 0
+ERROR: Record skipped due to validation failure: B,The Catcher in the Rye,JD Salinger,3,Coming of Age,234,1951,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Lord: 0
+Invalid weeksNYT for ,Lord: 0
+ERROR: Record skipped due to validation failure: B,Lord of the Flies,William Golding,6,Adventure,224,1954,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Of: 0
+Invalid weeksNYT for ,Of: 0
+ERROR: Record skipped due to validation failure: B,Of Mice and Men,John Steinbeck,5,Tragedy,107,1937,,,,
+The rating provided: 2049 is invalid
+Invalid year released for ,Blade: 0
+ERROR: Record skipped due to validation failure: M,Blade Runner 2049,Denis Villeneuve,9,Sci-Fi,163,2017,Ryan Gosling,Harrison Ford,,
+The rating provided: 0 is invalid
+Invalid year released for ,Jurassic: 0
+ERROR: Record skipped due to validation failure: M,Jurassic Park,Steven Spielberg,8,Sci-Fi,127,1993,Sam Neill,Jeff Goldblum,,
+The rating provided: 0 is invalid
+Invalid year released for ,Dune,Denise: 0
+ERROR: Record skipped due to validation failure: M,Dune,Denise Villeneuve,7,Sci-Fi,155,2021,Timothee Chalamet,Zendaya,,
+The rating provided: 0 is invalid
+Invalid year released for ,So: 0
+ERROR: Record skipped due to validation failure: M,So I Married an Axe Murderer,Thomas Schlamme,15,Comedy,93,1993,Mike Meyers,Nancy Travis,,
+The rating provided: 0 is invalid
+Invalid year released for ,Fight: 0
+ERROR: Record skipped due to validation failure: M,Fight Club,David Fincher,10,Drama,7219,1999,Brad Pitt,Edward Norton,,
+The rating provided: 0 is invalid
+Invalid year released for ,Percy: 0
+ERROR: Record skipped due to validation failure: M,Percy Jackson and the Lightning Thief,Chris Columbus,2,Fantasy,119,2010,Logan Lerman,Alexandra Daddario,,
+The rating provided: 0 is invalid
+Invalid year released for ,The: 0
+ERROR: Record skipped due to validation failure: M,The Grand Budapest Hotel,Wes Anderson,9,Adventure,100,2014,Ralph Fiennes,Saoirse Ronan,,
+The rating provided: 0 is invalid
+Invalid year released for ,Superman,Richard: 0
+ERROR: Record skipped due to validation failure: M,Superman,Richard Donner,8,Sci-Fi,143,1978,Christopher Reeve,Gene Hackman,Margo Kidder,
+The rating provided: 0 is invalid
+Invalid year released for ,Spirited: 0
+ERROR: Record skipped due to validation failure: M,Spirited Away,Hayao Miyazaki,8,Fantasy,125,2002,Rumi Hiiragi,Miyu Irino,,
+The rating provided: 0 is invalid
+Invalid year released for ,Gone: 0
+ERROR: Record skipped due to validation failure: M,Gone Girl,David Fincher,10,Thriller/Mystery,149,2014,Ben Affleck,Rosamund Pike,,
+The rating provided: 0 is invalid
+Invalid year released for ,Moonlight,Barry: 0
+ERROR: Record skipped due to validation failure: M,Moonlight,Barry Jenkins,10,Drama,119,2016,Mahershala Ali,Naomi Harris,,
+The rating provided: 0 is invalid
+Invalid year released for ,The: 0
+ERROR: Record skipped due to validation failure: M,The Wolf of Wallstreet,Martin Scorsese,10,Comedy/Crime,180,2013,Leonardo DiCaprio,Jonah Hill,,
+The rating provided: 0 is invalid
+Invalid year released for ,Crime: 0
+Invalid weeksNYT for ,Crime: 0
+ERROR: Record skipped due to validation failure: B,Crime and Punishment,Fyodor Dostoevsky,7,Crime Fiction,576,1866,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,House: 0
+Invalid weeksNYT for ,House: 0
+ERROR: Record skipped due to validation failure: B,House of Leaves,Mark Z. Danielewski,9,Horror,709,2000,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,I: 0
+Invalid weeksNYT for ,I: 0
+ERROR: Record skipped due to validation failure: B,I Can Teach You to Be Rich,Ramit Sethi,8,Self Help,272,2009,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Neuromancer,William: 0
+Invalid weeksNYT for ,Neuromancer,William: 0
+ERROR: Record skipped due to validation failure: B,Neuromancer,William Gibson,10,Cyberpunk,271,1984,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Percy: 0
+Invalid weeksNYT for ,Percy: 0
+ERROR: Record skipped due to validation failure: B,Percy Jackson and the Last Olympian,Rick Riordan,9,Fantasy,381,2009,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Six: 0
+Invalid weeksNYT for ,Six: 0
+ERROR: Record skipped due to validation failure: B,Six of Crows,Leigh Bardugo,10,Fantasy,462,2015,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,The: 0
+Invalid weeksNYT for ,The: 0
+ERROR: Record skipped due to validation failure: B,The Alchemist,Paulo Coelho,9,Adventure,163,1993,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,The: 0
+Invalid weeksNYT for ,The: 0
+ERROR: Record skipped due to validation failure: B,The Goldfinch,Donna Tartt,10,Suspense,784,2013,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,The: 0
+Invalid weeksNYT for ,The: 0
+ERROR: Record skipped due to validation failure: B,The Hunger Games,Suzanne Collins,7,Action,284,2008,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,The: 0
+Invalid weeksNYT for ,The: 0
+ERROR: Record skipped due to validation failure: B,The Music of Erich Zann,H.P. Lovecraft,10,Horror,20,1921,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Watchmen,Alan: 0
+Invalid weeksNYT for ,Watchmen,Alan: 0
+ERROR: Record skipped due to validation failure: B,Watchmen,Alan Moore,8,Science Fiction,416,1987,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Way: 0
+Invalid weeksNYT for ,Way: 0
+ERROR: Record skipped due to validation failure: B,Way of kings,Brandon Sanderson,10,Fantasy,1200,2010,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,All: 0
+ERROR: Record skipped due to validation failure: S,All Too Well,Taylor Swift,10,Pop,327,2012,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Baba: 0
+ERROR: Record skipped due to validation failure: S,Baba Yetu,Christopher Tin,10,Choir,203,2025,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Ball: 0
+ERROR: Record skipped due to validation failure: S,Ball if I want to,Da Baby,10,Rap,192,2021,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Blinding: 0
+ERROR: Record skipped due to validation failure: S,Blinding Lights,the Weeknd,10,9,Synthwave,2020,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Call: 0
+ERROR: Record skipped due to validation failure: S,Call out my name,The Weeknd,8,R&B,228,2021,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Compass,The: 0
+ERROR: Record skipped due to validation failure: S,Compass,The Neighbourhood,8,Indie,167,2018,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Easy: 0
+ERROR: Record skipped due to validation failure: S,Easy on me,Adele,6,pop,332,2021,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Figures,Jessie: 0
+ERROR: Record skipped due to validation failure: S,Figures,Jessie Reyez,8,R&B,240,2018,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,First: 0
+ERROR: Record skipped due to validation failure: S,First Love / Late Spring,Mitski,10,Indie,278,2014,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Frozen,Sabrina: 0
+ERROR: Record skipped due to validation failure: S,Frozen,Sabrina Lauduio,5,R&B,242,2017,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Garden: 0
+ERROR: Record skipped due to validation failure: S,Garden Grove,Sublime,10,Reggae,262,1998,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Har: 0
+ERROR: Record skipped due to validation failure: S,Har dil ki ava,Atif aslam,10,Slow music,188,2014,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Holy: 0
+ERROR: Record skipped due to validation failure: S,Holy Ghost,Borns,8,Choir,256,2015,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,kal: 0
+ERROR: Record skipped due to validation failure: S,kal ho na ho,singh,9,Punajbi,241,2009,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Monks,Frank: 0
+ERROR: Record skipped due to validation failure: S,Monks,Frank Ocean,10,Pop,199,2012,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,More: 0
+ERROR: Record skipped due to validation failure: S,More Than a Woman,Bee Gees,9,Pop,195,1977,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,nasha: 0
+ERROR: Record skipped due to validation failure: S,nasha ha,Ali zafar,8,normal one,258,2010,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Out: 0
+ERROR: Record skipped due to validation failure: S,Out Tha Mud,Kevin Gates,10,Rap,187,2015,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Phali: 0
+ERROR: Record skipped due to validation failure: S,Phali dafa,Atif aslam,9,urdu,284,2017,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Sea: 0
+ERROR: Record skipped due to validation failure: S,Sea Dragon,Covet,9,Math Rock,333,2018,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Slacker,Tech: 0
+ERROR: Record skipped due to validation failure: S,Slacker,Tech N9ne,10,Rap,257,2002,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Something,Snarky: 0
+ERROR: Record skipped due to validation failure: S,Something,Snarky Puppy ft.Lahlah Hathaway,10,R&B - Jazz,464,2015,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Stayin': 0
+ERROR: Record skipped due to validation failure: S,Stayin' Alive,Bee Gees,10,Pop,419,1979,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Sweet: 0
+ERROR: Record skipped due to validation failure: S,Sweet Caroline,Neil Diamond,10,Rock,203,1969,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Sweet: 0
+ERROR: Record skipped due to validation failure: S,Sweet Life,Frank Ocean,8,Pop,262,2012,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Thank: 0
+ERROR: Record skipped due to validation failure: S,Thank u - next,Ariana Grande,8,Pop,207,2019,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,The: 0
+ERROR: Record skipped due to validation failure: S,The Mountain Top,Lena Raine,10,Video Game Soundtrack,259,2021,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Tik: 0
+ERROR: Record skipped due to validation failure: S,Tik Tok,Kesha,9,Pop,199,2009,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Tranquility: 0
+ERROR: Record skipped due to validation failure: S,Tranquility Base Hotel & Casino,Arctic Monkeys,10,Rock,211,2018,,,,
+The rating provided: 0 is invalid
+Invalid year released for ,Wake: 0
+ERROR: Record skipped due to validation failure: S,Wake Up,Eden,9,Alternative,279,2015,,,,
+Invalid type: Q
+The rating provided: 0 is invalid
+Invalid year released for ,,,,,,,,,,: 0
+ERROR: Record skipped due to validation failure: Q,,,,,,,,,,
+ERROR: Command record too short: M
+ERROR: Command record too short: B
+ERROR: Command record too short: S
+ERROR: Command record too short: A
+ERROR: Command record too short: T
+ERROR:M,Psych 2: Lassie Come Home,Steve Franks,16,Comedy,115,2020,James Roday,Dule Hill,Timothy Omundson
+There was an invalid value entered for rating
+ERROR:S,Respect,Aretha Franklin,ERROR,R&B,281,1967,1
+Previous record has an invalid stoi argument error
+ERROR:S,Strawberry Fields Forever,Beatles,9,pop,ERROR,1967,0
+Previous record has an invalid stoi argument error
+ERROR:S,Strawberry Fields Forever,Beatles,9,pop,185,1967,ERROR
+Invalid top40 field in recorn
+ERROR:B,Close Encounters,Steven Spielberg,5,Science Fiction,256,1997,ERROR
+Missing weeksNYT field in record 
+ERROR:B,The Brothers Hawthorne,Jennifer Lynn Barnes,9,Mystery,400,ERROR,0
+Previous record has an invalid stoi argument error
+ERROR:B,Lessons in Chemistry,Bonnie Garmus,5,Humor,320,2026,0
+There was an invalid value entered for rating
+ERROR: Command record too short: A
+ERROR: Command record too short: T
+ERROR: Command record too short: Q
