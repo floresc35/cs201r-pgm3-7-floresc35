@@ -10,84 +10,41 @@
 using namespace std;
 
 int main() {
-
-    ifstream inList, inCommands;
+    ifstream inCommands;
     ofstream outFile, outErr;
+    vector <Media*> myLib;
 
     try {
-        inList.exceptions(ifstream::failbit);
-        inList.open("mediaList.txt");
         inCommands.exceptions(ifstream::failbit);
-        inCommands.open("mediaCommands.txt");
         outFile.exceptions(ofstream::failbit);
-        outFile.open("mediaReport.txt");
         outErr.exceptions(ofstream::failbit);
+
+        outFile.open("mediaReport.txt");
         outErr.open("mediaError.txt");
         
-    } catch (ifstream::failure& fail) {
-        cout << "Could not open input file" << fail.what() << endl;
-        cout << fail.code() << endl;
+        // read data into myLib
+        readMediaData("mediaList.txt", myLib, outErr);
+
+        inCommands.open("mediaCommands.txt");
+        executeCommands(inCommands, myLib, outFile, outErr);
+
+        inCommands.close();
+        outFile.close();
+        outErr.close();
+
+        //clean up memory
+        for (Media* item : myLib) {
+            delete item;
+        }
+        myLib.clear();
+
+    } catch (ifstream::failure& e) {
+        cout << "Error opening/reading file: " << e.what() << endl;
+        cout << e.code() << endl;
         cout << "This failed bruh" << endl;
         return 1;
     }
-    
-    vector <Media*> myLib;
-    // read data into myLib
-    readMediaData("mediaList.txt", myLib, outErr);
-    inList.close();
 
-
-    // prepare to read the commands
-    string commandRecord;
-    while (getline(inCommands, commandRecord)) {
-        if (commandRecord.empty() || (commandRecord.size() <= 2)) {
-            outErr << "ERROR: Command record too short: " << commandRecord << endl;
-            continue;
-        }
-
-        char choice = commandRecord[0];
-        string params = commandRecord.substr(2);
-        
-        if (choice == 'Q') {
-            cout << "Thank You for Using Media Everywhere" << endl;
-            break;
-        }
-        else if (choice == 'A' || choice == 'M' || choice == 'B' || choice == 'S') {
-            if (params.empty()) {
-                printReport(commandRecord, outFile, outErr, myLib);
-            } else if (isdigit(params[0])) {
-                printReportRating(commandRecord, outFile, outErr, myLib);
-            } else {
-                printReportGenre(commandRecord, outFile, outErr, myLib);
-            }
-        } else if (choice == 'T') {
-            printTotals(outFile, myLib);
-        } else if (choice == 'N') {
-            // add new content
-            Media* newMedia = parseMedia(params, outErr);
-            if (newMedia) {
-                myLib.push_back(newMedia);
-            }
-        } else if (choice == 'L') {
-            listStars(params, myLib);
-        } else if (choice == 'F') {
-            findMovies(params, myLib);
-        } else if (choice == 'K') {
-            findMediaByName(params, myLib);
-        } else {
-            outErr << "ERROR: Invalid command: " << commandRecord << endl;
-        }
-        outFile.flush();
-        outErr.flush();
-    }
-
-    inCommands.close();
-    outFile.close();
-    outErr.close();
-
-    //clean up memory
-    for (auto media : myLib) {
-        delete media;
-    }
     return 0;
+    
 } 

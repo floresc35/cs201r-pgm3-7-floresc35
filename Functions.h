@@ -36,4 +36,4 @@ void addContent(const string& currRecord, ostream& outFile, ostream& errFile, ve
 void listStars(const std::string& searchTerm, const std::vector<Media*>& mediaList);
 void findMovies(const std::string& searchTerm, const std::vector<Media*>& mediaList);
 void findMediaByName(const std::string& searchTerm, const std::vector<Media*>& mediaList);
-
+void executeCommands(ifstream& inFile, vector<Media*>& mediaList, ofstream& outFile, ofstream& outErr);

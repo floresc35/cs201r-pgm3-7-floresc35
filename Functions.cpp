@@ -306,26 +306,60 @@ void findMediaByName(const std::string& searchTerm, const std::vector<Media*>& m
     }
 }
 
-void executeCommands(const string& commandFile, const vector<Media*>& mediaList) {
-    ifstream inputFile(commandFile);
-    if (!inputFile) {
-        throw runtime_error("Unable to open command file.");
-    }
+void executeCommands(ifstream& inFile, vector<Media*>& mediaList, 
+                    ofstream& outFile, ofstream& outErr) {
+    string line;
+    while (getline(inFile, line)) {
+        if (line.empty()) continue;
+        
+        stringstream ss(line);
+        string command;
+        getline(ss, command, ',');
 
-    string command;
-    while (getline(inputFile, command)) {
-        char commandType = command[0];
-        string searchTerm = command.substr(2); // Command format: X,string
-
-        if (commandType == 'L') {
-            listStars(searchTerm, mediaList);
-        } else if (commandType == 'F') {
-            findMovies(searchTerm, mediaList);
-        } else if (commandType == 'K') {
-            findMediaByName(searchTerm, mediaList);
+        if (command == "Q") {
+            cout << "Thank You for Using Media Everywhere" << endl;
+            break;
+        }
+        // single letter (A, M, B, S, T)
+        if (command.length() == 1) {
+            switch(command[0]) {
+                case 'A':
+                case 'M':
+                case 'B':
+                case 'S':
+                    printReport(line, outFile, outErr, mediaList);
+                    break;
+                case 'T':
+                    printTotals(outFile, mediaList);
+                    break;
+            }
+        }
+        // commands with parameters
+        else if (command.length() > 1) {
+            char cmdType = command[0];
+            switch(cmdType) {
+                case 'N':
+                    addContent(line, outFile, outErr, mediaList);
+                    break;
+                case 'L':
+                    listStars(line.substr(2), mediaList);
+                    break;
+                case 'F':
+                    findMovies(line.substr(2), mediaList);
+                    break;
+                case 'K':
+                    findMediaByName(line.substr(2), mediaList);
+                    break;
+                case 'A':
+                case 'M':
+                case 'B':
+                case 'S':
+                    if (isDigits(line.substr(2)))
+                        printReportRating(line, outFile, outErr, mediaList);
+                    else
+                        printReportGenre(line, outFile, outErr, mediaList);
+                    break;
+            }
         }
     }
-
-    inputFile.close();
 }
-
